@@ -35,11 +35,15 @@ class MainHandler(webapp2.RequestHandler):
 
 class FlightHandler(webapp2.RequestHandler):
     def post(self):
+        response = urllib2.urlopen('http://jservice.io/api/random')
+        content = response.read()
+        content_dict = json.loads(content)
 
+        passengers = content['request'][]
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
-    ('/create_trip', NewTripHandler),
+    ('/survey', SurveyHandler),
     ('/trips', TripHandler),
     ('/get_flight', FlightHandler),
     ('/get_attractions', AttractionHandler),
