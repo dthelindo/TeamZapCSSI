@@ -53,7 +53,7 @@ class SurveyHandler(webapp2.RequestHandler):
 
     def post(self):
         my_vars = {
-            'landscape' = landscape
+            'landscape': landscape
         }
         template = env.get_template("results.html")
         self.response.out.write(template.render(my_vars))
