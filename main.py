@@ -10,6 +10,10 @@ import urllib
 import urllib2
 import webapp2
 
+class Trip(ndb.Model):
+    location = ndb.StringProperty()
+    
+
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         cur_user = users.get_current_user()
@@ -21,3 +25,7 @@ class MainHandler(webapp2.RequestHandler):
         search_term = self.request.get('q')
 
         template = env.get_template('main.html')
+        variables = {
+            'user': cur_user,
+            'log_url': log_url,
+        }
