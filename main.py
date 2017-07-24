@@ -73,9 +73,4 @@ class AttractionHandler(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/survey', SurveyHandler),
-    '''
-    ('/trips', TripHandler),
-    ('/get_flight', FlightHandler),
-    ('/get_attractions', AttractionHandler),
-    '''
 ], debug=True)
