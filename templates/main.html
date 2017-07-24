@@ -8,6 +8,13 @@
 </head>
 
 <body>
+  <div id="headerTop">
+    {% if user %}
+  <p>Hello {{user.nickname()}}
+  </p>
+  {% endif %}
+</div>
+
   <br></br>
     <h1> <a href="{{log_url}}" style="text-decoration: none; color: black">Escape </a></h1>
 
