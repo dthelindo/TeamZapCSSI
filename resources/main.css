@@ -1,0 +1,12 @@
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 100px;
+  text-shadow: 4px 4px 4px #aaa;
+}
+
+body {
+    background-image: url("../resources/escape.gif");
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

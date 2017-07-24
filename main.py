@@ -43,7 +43,7 @@ class FlightHandler(webapp2.RequestHandler):
         adult_passengers = content_dict['request']['passengers']['adultCount']
         senior_passengers = content_dict['request']['passengers']['seniorCount']
 
-        destination = content_dict['slice']['destination']
+        destination = content_dict['request']['slice']['destination']
 
 class SurveyHandler(webapp2.RequestHandler):
     def get(self):
