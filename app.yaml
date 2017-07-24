@@ -1,8 +1,7 @@
 runtime: python27
 api_version: 1
 threadsafe: true
-service: escape
-
+  
 handlers:
   - url: /resources
     static_dir: resources/

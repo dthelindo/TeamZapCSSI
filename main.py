@@ -17,6 +17,9 @@ class Trip(ndb.Model):
     city = ndb.StringProperty()
     date = ndb.DateProperty()
 
+class Login(ndb.Model):
+    user_email = ndb.StringProperty()
+
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
@@ -35,7 +38,7 @@ class MainHandler(webapp2.RequestHandler):
         }
         self.response.out.write(template.render(variables))
 
-class FlightHandler(webapp2.RequestHandler):
+''' class FlightHandler(webapp2.RequestHandler):
     def post(self):
         response = urllib2.urlopen('https://www.googleapis.com/qpxExpress/v1/trips/search')
         content = response.read()
@@ -45,7 +48,7 @@ class FlightHandler(webapp2.RequestHandler):
         adult_passengers = content_dict['request']['passengers']['adultCount']
         senior_passengers = content_dict['request']['passengers']['seniorCount']
 
-        destination = content_dict['request']['slice']['destination']
+        destination = content_dict['request']['slice']['destination']'''
 
 class SurveyHandler(webapp2.RequestHandler):
     def get(self):
