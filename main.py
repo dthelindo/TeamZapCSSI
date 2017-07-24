@@ -37,6 +37,10 @@ class FlightHandler(webapp2.RequestHandler):
     def post(self):
 
 
+class SurveyHandler(webapp2.RequestHandler):
+    def get(self):
+
+
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/create_trip', NewTripHandler),
