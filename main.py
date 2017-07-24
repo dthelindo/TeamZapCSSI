@@ -58,7 +58,7 @@ class SurveyHandler(webapp2.RequestHandler):
         }
         template = env.get_template("results.html")
         self.response.out.write(template.render(my_vars))
-
+'''
 class TripHandler(webapp2.RequestHandler):
     def get(self):
         template = env.get_template("trips.html")
@@ -68,12 +68,14 @@ class AttractionHandler(webapp2.RequestHandler):
     def post(self):
         template = env.get_template("attractions.html")
         self.response.out.write(template.render())
-
+'''
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/survey', SurveyHandler),
+    '''
     ('/trips', TripHandler),
     ('/get_flight', FlightHandler),
     ('/get_attractions', AttractionHandler),
+    '''
 ], debug=True)
