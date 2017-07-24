@@ -21,23 +21,23 @@ class Trip(ndb.Model):
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         cur_user = users.get_current_user()
-        log_url = ''
+        '''log_url = ''
         if cur_user:
             log_url = users.create_logout_url('/')
         else:
             log_url = users.create_login_url('/')
         search_term = self.request.get('q')
-
+'''
         template = env.get_template('main.html')
         variables = {
             'user': cur_user,
-            'log_url': log_url,
+            #'log_url': log_url,
         }
         self.response.out.write(template.render(variables))
 
 class FlightHandler(webapp2.RequestHandler):
     def post(self):
-        response = urllib2.urlopen('http://jservice.io/api/random')
+        response = urllib2.urlopen('https://www.googleapis.com/qpxExpress/v1/trips/search')
         content = response.read()
         content_dict = json.loads(content)
 
@@ -59,6 +59,11 @@ class SurveyHandler(webapp2.RequestHandler):
         template = env.get_template("results.html")
         self.response.out.write(template.render(my_vars))
 
+class LoginHandler(webapp2.RequestHandler):
+    def get(self):
+        template = env.get_template("login.html")
+        self.response.out.write(template.render())
+'''
 class TripHandler(webapp2.RequestHandler):
     def get(self):
         template = env.get_template("trips.html")
@@ -68,12 +73,10 @@ class AttractionHandler(webapp2.RequestHandler):
     def post(self):
         template = env.get_template("attractions.html")
         self.response.out.write(template.render())
-
+'''
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/survey', SurveyHandler),
-    ('/trips', TripHandler),
-    ('/get_flight', FlightHandler),
-    ('/get_attractions', AttractionHandler),
+    ('/login', LoginHandler)
 ], debug=True)
