@@ -17,6 +17,9 @@ class Trip(ndb.Model):
     city = ndb.StringProperty()
     date = ndb.DateProperty()
 
+class Login(ndb.Model):
+    user_email = ndb.StringProperty()
+
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
@@ -61,6 +64,7 @@ class SurveyHandler(webapp2.RequestHandler):
 
 class LoginHandler(webapp2.RequestHandler):
     def get(self):
+        user_key = ndb.Key(urlsafe=self.request.get('email'))
         template = env.get_template("login.html")
 '''
 class TripHandler(webapp2.RequestHandler):
