@@ -64,7 +64,6 @@ class SurveyHandler(webapp2.RequestHandler):
 
 class LoginHandler(webapp2.RequestHandler):
     def get(self):
-
         template = env.get_template("login.html")
         self.response.out.write(template.render())
 '''
