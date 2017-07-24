@@ -47,6 +47,12 @@ class FlightHandler(webapp2.RequestHandler):
 
 class SurveyHandler(webapp2.RequestHandler):
     def get(self):
+        template = jinja_env.get_template("survey.html")
+        self.response.out.write(template.render())
+
+    def post(self):
+        template = jinja_env.get_template("results.html")
+        self.response.out.write(template.render())
 
 
 app = webapp2.WSGIApplication([
