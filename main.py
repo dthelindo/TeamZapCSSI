@@ -25,7 +25,7 @@ class MainHandler(webapp2.RequestHandler):
         if cur_user:
             log_url = users.create_logout_url('/')
         else:
-            log_url = users.create_login_url('/')
+            log_url = users.create_login_url('/survey')
         search_term = self.request.get('q')
 
         template = env.get_template('main.html')
