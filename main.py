@@ -48,21 +48,24 @@ class FlightHandler(webapp2.RequestHandler):
 
 class SurveyHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_env.get_template("survey.html")
+        template = env.get_template("survey.html")
         self.response.out.write(template.render())
 
     def post(self):
-        template = jinja_env.get_template("results.html")
-        self.response.out.write(template.render())
+        my_vars = {
+            'landscape' = landscape
+        }
+        template = env.get_template("results.html")
+        self.response.out.write(template.render(my_vars))
 
 class TripHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_env.get_template("trips.html")
+        template = env.get_template("trips.html")
         self.response.out.write(template.render())
 
 class AttractionHandler(webapp2.RequestHandler):
     def post(self):
-        template = jinja_env.get_template("attractions.html")
+        template = env.get_template("attractions.html")
         self.response.out.write(template.render())
 
 
