@@ -1,7 +1,11 @@
+@import "compass";
+
 h1 {
   font-family: 'Dancing Script', cursive;
-  font-size: 100px;
-  text-shadow: 4px 4px 4px #aaa;
+  font-size: 200px;
+  text-shadow: 4px 4px 4px #CC6B8E;
+  text-align:center;
+  position: relative
 }
 
 body {
@@ -9,4 +13,13 @@ body {
     background-color: #cccccc;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
+}
+
+#titles {
+  position: relative;
+  width: 640px;
+  height: 480px;
+  white-space: nowrap;
+  overflow: hidden;
 }
