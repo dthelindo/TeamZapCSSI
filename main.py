@@ -39,9 +39,11 @@ class FlightHandler(webapp2.RequestHandler):
         content = response.read()
         content_dict = json.loads(content)
 
-        child_passengers = content['request']['passengers']['childCount']
-        adult_passengers = content['request']['passengers']['adultCount']
-        senior_passengers = content['request']['passengers']['seniorCount']
+        child_passengers = content_dict['request']['passengers']['childCount']
+        adult_passengers = content_dict['request']['passengers']['adultCount']
+        senior_passengers = content_dict['request']['passengers']['seniorCount']
+
+        destination = content_dict['slice']['destination']
 
 class SurveyHandler(webapp2.RequestHandler):
     def get(self):
