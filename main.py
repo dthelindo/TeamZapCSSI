@@ -37,7 +37,7 @@ class MainHandler(webapp2.RequestHandler):
 
 class FlightHandler(webapp2.RequestHandler):
     def post(self):
-        response = urllib2.urlopen('http://jservice.io/api/random')
+        response = urllib2.urlopen('https://www.googleapis.com/qpxExpress/v1/trips/search')
         content = response.read()
         content_dict = json.loads(content)
 
