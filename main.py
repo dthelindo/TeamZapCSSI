@@ -14,6 +14,7 @@ class Trip(ndb.Model):
     country = ndb.StringProperty()
     state = ndb.StringProperty()
     city = ndb.StringProperty()
+    date = ndb.DateProperty()
 
 
 class MainHandler(webapp2.RequestHandler):
