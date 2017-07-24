@@ -3,7 +3,7 @@ h1 {
   font-family: 'Dancing Script', cursive;
   font-size: 200px;
   color: #EDE3E6;
-  text-shadow: 4px 4px 4px #8AB327;
+  text-shadow: 4px 4px 4px #181818;
   text-align:center;
   position: relative
 }
@@ -12,7 +12,7 @@ h1 {
 
 .bgimg-1, .bgimg-2  {
   position: relative;
-  opacity: 0.65;
+  opacity: 0.80;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -21,7 +21,7 @@ h1 {
 }
 
 .bgimg-1 {
-  background-image: url("../maldives.gif");
+  background-image: url("../hongkong.gif");
   min-height: 100%;
   position: relative;
 }
@@ -36,6 +36,7 @@ h1 {
 h2 {
   font-family: 'Dancing Script', cursive;
   font-size: 40px;
+  color: white;
   text-align: left;
   vertical-align: top;
   position: relative
