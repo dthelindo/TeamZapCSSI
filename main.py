@@ -66,6 +66,42 @@ class LoginHandler(webapp2.RequestHandler):
     def get(self):
         template = env.get_template("login.html")
         self.response.out.write(template.render())
+
+class DubaiHandler(webapp2.RquestHandler):
+    def get(self):
+        template = env.get_template("dubai.html")
+        self.response.out.write(template.render())
+
+class HongKongHandler(webapp2.RquestHandler):
+    def get(self):
+        template = env.get_template("hongkong.html")
+        self.response.out.write(template.render())
+
+class IcelandHandler(webapp2.RquestHandler):
+    def get(self):
+        template = env.get_template("iceland.html")
+        self.response.out.write(template.render())
+
+class MaldivesHandler(webapp2.RquestHandler):
+    def get(self):
+        template = env.get_template("maldives.html")
+        self.response.out.write(template.render())
+
+class MexicoCityHandler(webapp2.RquestHandler):
+    def get(self):
+        template = env.get_template("mexicocity.html")
+        self.response.out.write(template.render())
+
+class NewZealandHandler(webapp2.RquestHandler):
+    def get(self):
+        template = env.get_template("newzealand.html")
+        self.response.out.write(template.render())
+
+class SantoriniHandler(webapp2.RquestHandler):
+    def get(self):
+        template = env.get_template("santorini.html")
+        self.response.out.write(template.render())
+
 '''
 class TripHandler(webapp2.RequestHandler):
     def get(self):
@@ -81,5 +117,12 @@ class AttractionHandler(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/survey', SurveyHandler),
-    ('/login', LoginHandler)
+    ('/login', LoginHandler),
+    ('/dubai', DubaiHandler),
+    ('/hongkong', HongKongHandler),
+    ('/iceland', IcelandHandler),
+    ('/maldives', MaldivesHandler),
+    ('/mexicocity', MexicoCityHandler),
+    ('/newzealand', NewZealandHandler),
+    ('/santorini', SantoriniHandler),
 ], debug=True)
