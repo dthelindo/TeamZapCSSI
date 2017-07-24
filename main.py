@@ -10,6 +10,8 @@ import urllib
 import urllib2
 import webapp2
 
+env = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.dirname(__file__) + '/templates'))
+
 class Trip(ndb.Model):
     country = ndb.StringProperty()
     state = ndb.StringProperty()
@@ -54,6 +56,15 @@ class SurveyHandler(webapp2.RequestHandler):
         template = jinja_env.get_template("results.html")
         self.response.out.write(template.render())
 
+class TripHandler(webapp2.RequestHandler):
+    def get(self):
+        template = jinja_env.get_template("trips.html")
+        self.response.out.write(template.render())
+
+class AttractionHandler(webapp2.RequestHandler):
+    def post(self):
+        template = jinja_env.get_template("attractions.html")
+        self.response.out.write(template.render())
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
