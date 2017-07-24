@@ -4,8 +4,8 @@ threadsafe: true
 
 handlers:
   - url: /resources
-    script: resources/
-    
+    static_dir: resources/
+
   - url: /.*
     script: main.app
 
