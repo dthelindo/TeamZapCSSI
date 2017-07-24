@@ -1,0 +1,43 @@
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 200px;
+  color: #EDE3E6;
+  text-shadow: 4px 4px 4px #D25049;
+  text-align:center;
+  position: relative
+}
+
+
+
+.bgimg-1, .bgimg-2  {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.bgimg-1 {
+  background-image: url("../dubai.gif");
+  min-height: 100%;
+  position: relative;
+}
+
+.bgimg-2 {
+  background-color: : white;
+  min-height: 100%;
+}
+
+
+
+h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 40px;
+  color: white;
+  text-align: left;
+  vertical-align: top;
+  position: relative
+}
