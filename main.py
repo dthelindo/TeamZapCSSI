@@ -33,6 +33,7 @@ class MainHandler(webapp2.RequestHandler):
             'user': cur_user,
             'log_url': log_url,
         }
+        self.response.out.write(template.render(variables))
 
 class FlightHandler(webapp2.RequestHandler):
     def post(self):
