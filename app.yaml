@@ -3,6 +3,9 @@ api_version: 1
 threadsafe: true
 
 handlers:
+  - url: /resources
+    script: resources/
+    
   - url: /.*
     script: main.app
 
