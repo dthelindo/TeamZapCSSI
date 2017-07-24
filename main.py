@@ -1,4 +1,3 @@
-#TODO Dainel: Create login, handlers, etc
 from google.appengine.api import users
 from google.appengine.ext import ndb
 import datetime
@@ -9,6 +8,8 @@ import os
 import urllib
 import urllib2
 import webapp2
+
+env = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.dirname(__file__) + '/templates'))
 
 class Trip(ndb.Model):
     country = ndb.StringProperty()
@@ -32,6 +33,7 @@ class MainHandler(webapp2.RequestHandler):
             'user': cur_user,
             'log_url': log_url,
         }
+        self.response.out.write(template.render(variables))
 
 class FlightHandler(webapp2.RequestHandler):
     def post(self):
@@ -39,15 +41,32 @@ class FlightHandler(webapp2.RequestHandler):
         content = response.read()
         content_dict = json.loads(content)
 
-        passengers = content['request'][]
+        child_passengers = content_dict['request']['passengers']['childCount']
+        adult_passengers = content_dict['request']['passengers']['adultCount']
+        senior_passengers = content_dict['request']['passengers']['seniorCount']
+
+        destination = content_dict['request']['slice']['destination']
 
 class SurveyHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_env.get_template("survey.html")
+        template = env.get_template("survey.html")
         self.response.out.write(template.render())
 
     def post(self):
-        template = jinja_env.get_template("results.html")
+        my_vars = {
+            'landscape': landscape
+        }
+        template = env.get_template("results.html")
+        self.response.out.write(template.render(my_vars))
+
+class TripHandler(webapp2.RequestHandler):
+    def get(self):
+        template = env.get_template("trips.html")
+        self.response.out.write(template.render())
+
+class AttractionHandler(webapp2.RequestHandler):
+    def post(self):
+        template = env.get_template("attractions.html")
         self.response.out.write(template.render())
 
 
