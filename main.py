@@ -31,3 +31,15 @@ class MainHandler(webapp2.RequestHandler):
             'user': cur_user,
             'log_url': log_url,
         }
+
+class FlightHandler(webapp2.RequestHandler):
+    def post(self):
+
+
+app = webapp2.WSGIApplication([
+    ('/', MainHandler),
+    ('/create_trip', NewTripHandler),
+    ('/trips', TripHandler),
+    ('/get_flight', FlightHandler),
+    ('/get_attractions', AttractionHandler),
+], debug=True)
