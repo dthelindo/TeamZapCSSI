@@ -1,4 +1,3 @@
-#TODO Dainel: Create login, handlers, etc
 from google.appengine.api import users
 from google.appengine.ext import ndb
 import datetime
@@ -65,6 +64,7 @@ class AttractionHandler(webapp2.RequestHandler):
     def post(self):
         template = jinja_env.get_template("attractions.html")
         self.response.out.write(template.render())
+
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
