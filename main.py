@@ -11,8 +11,10 @@ import urllib2
 import webapp2
 
 class Trip(ndb.Model):
-    location = ndb.StringProperty()
-    
+    country = ndb.StringProperty()
+    state = ndb.StringProperty()
+    city = ndb.StringProperty()
+
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
