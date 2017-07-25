@@ -66,6 +66,15 @@ class SurveyHandler(webapp2.RequestHandler):
 
 class LoginHandler(webapp2.RequestHandler):
     def get(self):
+        cur_user = users.get_current_user()
+        if cur_user:
+            key = ndb.Key('Login', cur_user.email())
+            user = key.get()
+            if not user:
+                    user = Login(user_email=cur_user.email())
+                    user.key = key
+            user.put()
+
         template = env.get_template("login.html")
         self.response.out.write(template.render())
 
