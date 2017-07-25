@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" style="float: right"></div>
+  <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
   <script>
     function onSignIn(googleUser) {
       // Useful data for your client-side scripts:
@@ -29,7 +29,7 @@
     };
   </script>
   <br/>
-  <a href="/" onclick="signOut();" style="float: right">Sign out</a>
+  <a href="/" onclick="signOut();">Sign out</a>
   <script>
     function signOut() {
       var auth2 = gapi.auth2.getAuthInstance();
