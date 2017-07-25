@@ -21,6 +21,7 @@ class Trip(ndb.Model):
 
 class Login(ndb.Model):
     user_email = ndb.StringProperty()
+    password = ndb.StringProperty()
 
 
 class MainHandler(webapp2.RequestHandler):
@@ -30,7 +31,7 @@ class MainHandler(webapp2.RequestHandler):
         if cur_user:
             log_url = users.create_logout_url('/')
         else:
-            log_url = users.create_login_url('/')
+            log_url = users.create_login_url('/survey')
         search_term = self.request.get('q')
 '''
         template = env.get_template('main.html')
@@ -71,7 +72,7 @@ class LoginHandler(webapp2.RequestHandler):
             key = ndb.Key('Login', cur_user.email())
             user = key.get()
             if not user:
-                    user = Login(user_email=cur_user.email())
+                    user = Login(user_email=cur_user.email(), password=self.request.get('password'))
                     user.key = key
             user.put()
 
