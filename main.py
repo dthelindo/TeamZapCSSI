@@ -69,10 +69,10 @@ class LoginHandler(webapp2.RequestHandler):
     def get(self):
         cur_user = users.get_current_user()
         if cur_user:
-            key = ndb.Key('Login', cur_user.email())
+            key = ndb.Key('Login', self.request.get('email'))
             user = key.get()
             if not user:
-                    user = Login(user_email=cur_user.email(), password=self.request.get('password'))
+                    user = Login(user_email=self.request.get('email'), password=self.request.get('password'))
                     user.key = key
             user.put()
 
