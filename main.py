@@ -5,11 +5,13 @@ import jinja2
 import json
 import logging
 import os
+import requests
 import urllib
 import urllib2
 import webapp2
 
 env = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.dirname(__file__) + '/templates'))
+
 
 class Trip(ndb.Model):
     country = ndb.StringProperty()
@@ -69,10 +71,6 @@ class LoginHandler(webapp2.RequestHandler):
 
 class DubaiHandler(webapp2.RequestHandler):
     def get(self):
-        response = urllib2.urlopen('https://api.yelp.com/v2/search?term=food&location=Dubai')
-        content = response.read()
-        content_dict = json.loads(content)
-
         template = env.get_template("dubai.html")
         self.response.out.write(template.render())
 
