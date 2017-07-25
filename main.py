@@ -21,7 +21,7 @@ class Trip(ndb.Model):
 
 class Login(ndb.Model):
     user_email = ndb.StringProperty(indexed=True)
-    password = ndb.StringProperty(indexed=True)
+    #password = ndb.StringProperty(indexed=True)
 
 
 class MainHandler(webapp2.RequestHandler):
@@ -72,7 +72,7 @@ class LoginHandler(webapp2.RequestHandler):
             key = ndb.Key('Login', self.request.get('email'))
             user = key.get()
             if not user:
-                    user = Login(user_email=self.request.get('email'), password=self.request.get('password'))
+                    user = Login(user_email=key)
                     user.key = key
             user.put()
 
