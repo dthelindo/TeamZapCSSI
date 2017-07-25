@@ -1,37 +1,25 @@
 <html>
 <head>
-  <link rel="stylesheet" href="resources/survey.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
+  <script src="https://unpkg.com/jquery"></script>
+  <script src="https://surveyjs.azureedge.net/0.12.20/survey.jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/image-picker/0.3.0/image-picker.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/image-picker/0.3.0/image-picker.css" />
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../resources/survey.css">
 </head>
 
-
-
 <body>
-  <h1>Escape Survey</h1>
+  <div class="bgimg-1">
+    <h2>Escape</h2>
+</div>
+  <div class="bgimg-2"></div>
+  <h1>Let's get started.</h1>
 
-  <form method="post" action="">
-    <h3>Enter a name: <input type="text" name= "noun1"> </input> </h3>
-
-      <h3> Choose a preference: </h3>
-
-      <br> </br>
-          <input type="radio" name="landscape" value="Forest">Forest
-          </input>
-      <br> </br>
-          <input type="radio" name="landscape" value="Inner City">Inner-City
-          </input>
-      <br> </br>
-          <input type="radio" name="landscape" value="Rural">Rural
-          </input>
-
-
-
-    <p> <input type="submit" value="Submit"> </input> </p>
-  </form>
-
-
-
+    <div id="surveyElement"></div>
+    <div id="surveyResult"></div>
+    <script src="../resources/survey.js"></script>
 </body>
-
-
 
 </html>
