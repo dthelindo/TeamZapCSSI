@@ -1,5 +1,7 @@
 from google.appengine.api import users
 from google.appengine.ext import ndb
+from rauth import OAuth2Service
+from yelp_cred import client_id, client_secret
 import datetime
 import jinja2
 import json
@@ -10,6 +12,11 @@ import urllib2
 import webapp2
 
 env = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.dirname(__file__) + '/templates'))
+
+yelp = OAuth2Service(
+            client_id = client_id,
+            client_secret = client_secret,
+)
 
 class Trip(ndb.Model):
     country = ndb.StringProperty()
@@ -69,6 +76,10 @@ class LoginHandler(webapp2.RequestHandler):
 
 class DubaiHandler(webapp2.RequestHandler):
     def get(self):
+        response = urllib2.urlopen('https://api.yelp.com/v2/search?term=food&location=Dubai')
+        content = response.read()
+        content_dict = json.loads(content)
+
         template = env.get_template("dubai.html")
         self.response.out.write(template.render())
 
