@@ -5,7 +5,7 @@ import jinja2
 import json
 import logging
 import os
-import requests
+import pprint
 import urllib
 import urllib2
 import webapp2
@@ -71,6 +71,7 @@ class LoginHandler(webapp2.RequestHandler):
 
 class DubaiHandler(webapp2.RequestHandler):
     def get(self):
+
         template = env.get_template("dubai.html")
         self.response.out.write(template.render())
 
