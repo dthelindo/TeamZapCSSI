@@ -30,7 +30,10 @@ h1 {
   min-height: 100%;
 }
 
-
+.bgimg-2 iframe{
+  margin: auto;
+  display: block
+}
 
 h2 {
   font-family: 'Dancing Script', cursive;
