@@ -1,22 +1,24 @@
 
 h1 {
   font-family: 'Lato', sans-serif;
-  font-size: 100px;
-  top: -30px;
+  font-size: 120px;
   }
 
   h5 {
     font-family: 'Lato', sans-serif;
     font-size: 20px;
+    font-weight: bold;
+    color: black;
   }
 
 h2 {
   font-family: 'Dancing Script', cursive;
-  font-size: 30px;
-  color: white;
+  font-size: 40px;
+  color: black;
   text-align: left;
   vertical-align: top;
   top: -15px;
+  left: 15px;
   position: fixed;
 }
 
@@ -31,7 +33,7 @@ h2 {
 }
 
 .bgimg-1 {
-  background-color: black;
+  background-color: #FFBEA3;
   position: fixed;
   background-position: center;
   background-repeat: repeat;
@@ -48,16 +50,20 @@ h2 {
 .image_picker_image {
   height: 60px;
   width: 100px;
+  right: 30px;
 }
 .btn-green {
-  background-color: #1ab394;
-  color: #fff;
+  background-color: #FFBEA3;
   border-radius: 3px;
 }
 
 .btn-green:hover, .btn-green:focus {
     background-color: #18a689;
     color: #fff;
+}
+.btn-green {
+  font-family: 'Lato', sans-serif;
+  color: #FFBEA3
 }
 
 .panel-footer {
