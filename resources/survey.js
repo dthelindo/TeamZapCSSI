@@ -92,7 +92,7 @@ survey.onComplete.add(function(result) {
       && result.data["essential"]=="phone" || result.data["essential"]=="camera" || result.data["essential"]=="drink"
       && result.data["message"]=="restaurant" || result.data["message"]=="tanline"
       && result.data["food"]=="steak" || result.data["food"]=="salad"
-      && result.data["souvenir"]=="diamond" || result.data["souvenir"]=="rose"){
+      && result.data["souvenir"]!="totem"){
     window.location.replace('/santorini');
 
   }else if(result.data["luggage"]=="briefcase" || result.data["luggage"]=="purse" ||result.data["luggage"]=="luggage"
