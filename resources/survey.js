@@ -73,9 +73,8 @@ window.survey = new Survey.Model({ questions: [
         }
 ]});
 survey.onComplete.add(function(result) {
-  if(result.data["luggage"]=="purse" || result.data["luggage"]=="luggage"
+  if(result.data["luggage"]=="purse" //|| result.data["luggage"]=="luggage"
       && result.data["stay"]=="luxury"
-      && result.data["partner"]=="wife" || result.data["partner"]=="solo"
       && result.data["budget"]=="a lot"
       && result.data["bucketList"]!="outdoors" && result.data["bucketList"]!="beach"
       && result.data["essential"]=="phone" || result.data["essential"]=="coffee"
@@ -83,6 +82,16 @@ survey.onComplete.add(function(result) {
       && result.data["food"]=="sushi" || result.data["food"]=="steak"
       && result.data["souvenir"]=="diamond" || result.data["souvenir"]=="rose"){
     window.location.replace('/maldives');
+
+  }else if(result.data["luggage"]=="purse" || result.data["luggage"]=="luggage"
+      && result.data["stay"]=="luxury"
+      && result.data["budget"]=="a lot"
+      && result.data["bucketList"]!="outdoors" && result.data["bucketList"]!="beach"
+      && result.data["essential"]=="phone" || result.data["essential"]=="coffee"
+      && result.data["message"]=="restaurant" || result.data["message"]=="tanline"
+      && result.data["food"]=="sushi" || result.data["food"]=="steak"
+      && result.data["souvenir"]=="diamond" || result.data["souvenir"]=="rose"){
+    window.location.replace('/santorini');
 
   }else if(result.data["luggage"]=="purse" || result.data["luggage"]=="luggage"
       && result.data["stay"]=="luxury"
