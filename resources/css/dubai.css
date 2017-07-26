@@ -33,6 +33,11 @@ h1 {
 }
 
 
+.point_of_interest {
+  width: "50%";
+  height: "450"
+}
+
 
 h2 {
   font-family: 'Dancing Script', cursive;
