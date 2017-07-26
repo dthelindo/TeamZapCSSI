@@ -83,21 +83,36 @@ survey.onComplete.add(function(result) {
       && result.data["message"]=="restaurant" || result.data["message"]=="museums"
       && result.data["food"]=="sushi" || result.data["food"]=="salad"
       && result.data["souvenir"]=="diamond" || result.data["souvenir"]=="rose"){
+    window.location.replace('/maldives');
+
+  }else if(result.data["food"] == "sushi" || result.data["food"] == "pizza" && result.data["souvenir"] == "rose" && result.data["budget"] == "a lot"){
+    window.location.replace('/santorini');
+
+  }else if(result.data["luggage"]=="briefcase" || result.data["luggage"]=="purse" ||result.data["luggage"]=="luggage"
+      && result.data["stay"]=="luxury"
+      && result.data["budget"]=="a lot"
+      && result.data["bucketList"]!="outdoors" && result.data["bucketList"]!="beach"
+      && result.data["essential"]=="phone" || result.data["essential"]=="coffee"
+      && result.data["message"]=="restaurant" || result.data["message"]=="museums"
+      && result.data["food"]=="sushi" || result.data["food"]=="salad"
+      && result.data["souvenir"]=="diamond" || result.data["souvenir"]=="rose"){
     window.location.replace('/hongkong');
+
   }else if(result.data["food"] == "sushi" || result.data["food"] == "pizza" && result.data["souvenir"] == "rose" && result.data["budget"] == "a lot"){
     window.location.replace('/dubai');
+
   }else if(result.data["food"] == "sushi" || result.data["food"] == "pizza" && result.data["souvenir"] == "rose" && result.data["budget"] == "a lot"){
     window.location.replace('/newzealand');
+
   }else if(result.data["food"] == "sushi" || result.data["food"] == "pizza" && result.data["souvenir"] == "rose" && result.data["budget"] == "a lot"){
     window.location.replace('/canada');
-  }else if(result.data["food"] == "sushi" || result.data["food"] == "pizza" && result.data["souvenir"] == "rose" && result.data["budget"] == "a lot"){
-    window.location.replace('/iceland');
+
   }else if(result.data["food"] == "sushi" || result.data["food"] == "pizza" && result.data["souvenir"] == "rose" && result.data["budget"] == "a lot"){
     window.location.replace('/mexicocity');
-  }else if(result.data["food"] == "sushi" || result.data["food"] == "pizza" && result.data["souvenir"] == "rose" && result.data["budget"] == "a lot"){
-    window.location.replace('/maldives');
+
   } else if(result.data["food"] == "sushi" || result.data["food"] == "pizza" && result.data["souvenir"] == "rose" && result.data["budget"] == "a lot"){
-    window.location.replace('/santorini');
+    window.location.replace('/iceland');
+    
   }else{
     window.location.replace('/')
   }
