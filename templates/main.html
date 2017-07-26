@@ -15,9 +15,9 @@
 
   <div class="buttons">
     {% if user %}
-    <a href="{{log_url}}" class="button" style="text-decoration: none">LOGOUT</a>
+    <a href="{{log_url}}" class="button" style="text-decoration: none; color: black">LOGOUT</a>
     {% else %}
-    <a href="{{log_url}}" class="button" style="text-decoration: none">LOGIN</a>
+    <a href="{{log_url}}" class="button" style="text-decoration: none; color: black">LOGIN</a>
     {% endif %}
   </div>
 
@@ -36,7 +36,7 @@
       {% if user %}
       <h3><a href="/survey" class="buttons" style="text-decoration: none">Get Started</a></h3>
       {% else %}
-        <h3><a href="{{log_url}}" class="buttons" style="text-decoration: none">Get Started</a></h3>
+        <h3><a class="buttons" style="text-decoration: none; background-color: gray; color: #9b9b9b" disabled>Get Started</a></h3>
       {% endif %}
   </div>
 
