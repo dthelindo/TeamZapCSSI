@@ -85,19 +85,19 @@ survey.onComplete.add(function(result) {
       && result.data["souvenir"]=="diamond" || result.data["souvenir"]=="rose"){
     window.location.replace('/hongkong');
   }else if(result.data["food"] == "sushi" || result.data["food"] == "pizza" && result.data["souvenir"] == "rose" && result.data["budget"] == "a lot"){
-    window.location.replace('/hongkong');
+    window.location.replace('/dubai');
   }else if(result.data["food"] == "sushi" || result.data["food"] == "pizza" && result.data["souvenir"] == "rose" && result.data["budget"] == "a lot"){
-    window.location.replace('/hongkong');
+    window.location.replace('/newzealand');
   }else if(result.data["food"] == "sushi" || result.data["food"] == "pizza" && result.data["souvenir"] == "rose" && result.data["budget"] == "a lot"){
-    window.location.replace('/hongkong');
+    window.location.replace('/canada');
   }else if(result.data["food"] == "sushi" || result.data["food"] == "pizza" && result.data["souvenir"] == "rose" && result.data["budget"] == "a lot"){
-    window.location.replace('/hongkong');
+    window.location.replace('/iceland');
   }else if(result.data["food"] == "sushi" || result.data["food"] == "pizza" && result.data["souvenir"] == "rose" && result.data["budget"] == "a lot"){
-    window.location.replace('/hongkong');
+    window.location.replace('/mexicocity');
   }else if(result.data["food"] == "sushi" || result.data["food"] == "pizza" && result.data["souvenir"] == "rose" && result.data["budget"] == "a lot"){
-    window.location.replace('/hongkong');
+    window.location.replace('/maldives');
   } else if(result.data["food"] == "sushi" || result.data["food"] == "pizza" && result.data["souvenir"] == "rose" && result.data["budget"] == "a lot"){
-    window.location.replace('/hongkong');
+    window.location.replace('/santorini');
   }else{
     window.location.replace('/')
   }
