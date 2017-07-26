@@ -33,7 +33,7 @@ window.survey = new Survey.Model({ questions: [
             {value: "normal", text: "../resources/moneybag.png"},
             {value: "a lot", text: "../resources/moneybag2.png"},
          ]
-      }, { type: "dropdown", name: "essential", renderAs: "imagepicker", title: "The first thing on my bucket list is: ",
+      }, { type: "dropdown", name: "bucketList", renderAs: "imagepicker", title: "The first thing on my bucket list is: ",
           choices: [
              {value: "outdoors", text: "../resources/boat.png"},
              {value: "foodie", text: "../resources/cutlery.png"},

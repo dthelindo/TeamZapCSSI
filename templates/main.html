@@ -1,6 +1,9 @@
 <html>
 
 <head>
+  <meta name="google-signin-scope" content="profile email">
+  <meta name="google-signin-client_id" content="10485582231-vq9nh787v28gf93f8sftlm7qs1kur4uf.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
   <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
   <script src="jquery-3.2.1.min.js"></script>
@@ -9,6 +12,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD
   <div class="buttons">
     <a href="#" class="button">LOGIN</a>
   </div>
@@ -29,6 +33,43 @@
       <h3> Travel planning, <i>simplified</i>. </h3>
     </div>
   </div>
+=======
+  <!--
+  <div id="my-signin2"></div>
+  <script>
+    function onSuccess(googleUser) {
+      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+      //window.location = "/survey";
+    }
+    function onFailure(error) {
+      console.log(error);
+    }
+    function renderButton() {
+      gapi.signin2.render('my-signin2', {
+        'scope': 'profile email',
+        'width': 240,
+        'height': 50,
+        'longtitle': true,
+        'theme': 'dark',
+        'onsuccess': onSuccess,
+        'onfailure': onFailure
+      });
+    }
+  </script>
+  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+  <br/>
+  <a href="/" onclick="signOut();">Sign out</a>
+  <script>
+    function signOut() {
+      var auth2 = gapi.auth2.getAuthInstance();
+      auth2.signOut().then(function () {
+        console.log('User signed out.');
+      });
+    }
+  </script>-->
+  <br></br>
+    <h1> <a href="/login" style="text-decoration: none; color: black">Escape </a></h1>
+>>>>>>> caba6ac22e6a9ef32c597706fb99e82991a10a96
 
 </body>
 </html>
