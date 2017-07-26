@@ -165,6 +165,16 @@ class TeamHandler(webapp2.RequestHandler):
         template = env.get_template("team.html")
         self.response.out.write(template.render())
 
+class AboutHandler(webapp2.RequestHandler):
+    def get(self):
+        template = env.get_template("about.html")
+        self.response.out.write(template.render())
+
+class ContactHandler(webapp2.RequestHandler):
+    def get(self):
+        template = env.get_template("contact.html")
+        self.response.out.write(template.render())
+
 '''
 class TripHandler(webapp2.RequestHandler):
     def get(self):
@@ -189,4 +199,6 @@ app = webapp2.WSGIApplication([
     ('/newzealand', NewZealandHandler),
     ('/santorini', SantoriniHandler),
     ('/team', TeamHandler),
+    ('/about', AboutHandler),
+    ('/contact', ContactHandler),
 ], debug=True)
