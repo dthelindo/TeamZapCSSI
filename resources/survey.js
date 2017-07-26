@@ -24,8 +24,8 @@ window.survey = new Survey.Model({ questions: [
         choices: [
            {value: "airbnb", text: "../resources/airbnb.png"},
            {value: "resort", text: "../resources/hilton.png"},
-           {value: "solo", text: "../resources/tent.png"},
-           {value: "wife", text: "../resources/luxuryresort.png"}
+           {value: "tent", text: "../resources/tent.png"},
+           {value: "luxury", text: "../resources/luxuryresort.png"}
         ]
      }, { type: "dropdown", name: "budget", renderAs: "imagepicker", title: "What is your budget?",
          choices: [
@@ -76,7 +76,10 @@ survey.onComplete.add(function(result) {
 	document.querySelector('#surveyResult').innerHTML = "result: " + JSON.stringify(result.data);
   //document.querySelector('#surveyResult').innerHTML = "food: " + JSON.stringify(result.data['food']);
   if(result.data["luggage"]=="briefcase" || result.data["luggage"]=="purse" ||result.data["luggage"]=="luggage"
-      &&){
+      && result.data["stay"]=="luxury"
+      && result.data["budget"]=="a lot"
+      && result.data["bucketList"]!="outdoors" && result.data["bucketList"]!="beach"
+      && ){
     window.location.replace('/hongkong');
   }else if(result.data["food"] == "sushi" || result.data["food"] == "pizza" && result.data["souvenir"] == "rose" && result.data["budget"] == "a lot"){
     window.location.replace('/hongkong');
