@@ -73,20 +73,20 @@ window.survey = new Survey.Model({ questions: [
         }
 ]});
 survey.onComplete.add(function(result) {
-	document.querySelector('#surveyResult').innerHTML = "result: " + JSON.stringify(result.data);
-
   if(result.data["luggage"]=="briefcase" || result.data["luggage"]=="purse" || result.data["luggage"]=="luggage"
-      && result.data["stay"]=="luxury" || result.data["stay"]=="resort"
+      && result.data["stay"]=="luxury"
+      && result.data["partner"]=="wife" || result.data["partner"]=="solo"
       && result.data["budget"]=="a lot"
       && result.data["bucketList"]!="outdoors" && result.data["bucketList"]!="beach"
       && result.data["essential"]=="phone" || result.data["essential"]=="coffee"
-      && result.data["message"]=="restaurant" || result.data["message"]=="museums"
-      && result.data["food"]=="sushi" || result.data["food"]=="salad"
-      && result.data["souvenir"]=="diamond" || result.data["souvenir"]=="rose"){
+      && result.data["message"]=="restaurant" || result.data["message"]=="tanline" || result.data["message"]=="wilderness"
+      && result.data["food"]=="sushi" || result.data["food"]=="steak"
+      && result.data["souvenir"]=="diamond" || result.data["souvenir"]=="rose" || result.data["souvenir"]=="surfing"){
     window.location.replace('/maldives');
 
   }else if(result.data["luggage"]=="purse" || result.data["luggage"]=="luggage"
       && result.data["stay"]=="luxury"
+      && result.data["partner"]!="family"
       && result.data["budget"]=="a lot"
       && result.data["bucketList"]!="touristy"
       && result.data["essential"]=="phone" || result.data["essential"]=="camera" || result.data["essential"]=="drink"
@@ -96,15 +96,15 @@ survey.onComplete.add(function(result) {
     window.location.replace('/santorini');
 
   }else if(result.data["luggage"]=="briefcase" || result.data["luggage"]=="purse" ||result.data["luggage"]=="luggage"
-      && result.data["stay"]=="airbnb" || result.data["stay"]=="resort"
+      && result.data["stay"]=="airbnb" || result.data["stay"]=="resort" || result.data["stay"]=="luxury"
       && result.data["budget"]!="little"
-      && result.data["bucketList"]!="outdoors" && result.data["bucketList"]!="beach"
-      && result.data["essential"]=="phone" || result.data["essential"]=="coffee"
-      && result.data["message"]=="restaurant" || result.data["message"]=="museums"
+      && result.data["bucketList"]!="shopping"
+      && result.data["essential"]=="camera" || result.data["essential"]=="drink" || result.data["essential"]=="phone"
+      && result.data["message"]=="restaurant" || result.data["message"]=="tanline" || result.data["message"]=="tanline"
       && result.data["food"]=="sushi" || result.data["food"]=="salad"
       && result.data["souvenir"]=="diamond" || result.data["souvenir"]=="rose"){
     window.location.replace('/hongkong');
-
+//any bucket list for dubai
   }else if(result.data["food"] == "sushi" || result.data["food"] == "pizza" && result.data["souvenir"] == "rose" && result.data["budget"] == "a lot"){
     window.location.replace('/dubai');
 
