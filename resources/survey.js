@@ -73,15 +73,15 @@ window.survey = new Survey.Model({ questions: [
         }
 ]});
 survey.onComplete.add(function(result) {
-  if(result.data["luggage"]=="briefcase" || result.data["luggage"]=="purse" || result.data["luggage"]=="luggage"
+  if(result.data["luggage"]=="purse" || result.data["luggage"]=="luggage"
       && result.data["stay"]=="luxury"
       && result.data["partner"]=="wife" || result.data["partner"]=="solo"
       && result.data["budget"]=="a lot"
       && result.data["bucketList"]!="outdoors" && result.data["bucketList"]!="beach"
       && result.data["essential"]=="phone" || result.data["essential"]=="coffee"
-      && result.data["message"]=="restaurant" || result.data["message"]=="tanline" || result.data["message"]=="wilderness"
+      && result.data["message"]=="restaurant" || result.data["message"]=="tanline"
       && result.data["food"]=="sushi" || result.data["food"]=="steak"
-      && result.data["souvenir"]=="diamond" || result.data["souvenir"]=="rose" || result.data["souvenir"]=="surfing"){
+      && result.data["souvenir"]=="diamond" || result.data["souvenir"]=="rose"){
     window.location.replace('/maldives');
 
   }else if(result.data["luggage"]=="purse" || result.data["luggage"]=="luggage"
@@ -104,8 +104,12 @@ survey.onComplete.add(function(result) {
       && result.data["food"]=="sushi" || result.data["food"]=="salad"
       && result.data["souvenir"]=="diamond" || result.data["souvenir"]=="rose"){
     window.location.replace('/hongkong');
-//any bucket list for dubai
-  }else if(result.data["food"] == "sushi" || result.data["food"] == "pizza" && result.data["souvenir"] == "rose" && result.data["budget"] == "a lot"){
+
+  }else if(result.data["luggage"]=="briefcase" || result.data["luggage"]=="purse" ||result.data["luggage"]=="luggage"
+      && result.data["stay"]=="airbnb" || result.data["stay"]=="resort" || result.data["stay"]=="luxury"
+      && result.data["budget"]!="little"
+      && result.data["essential"]!="hiking shoes"
+      && result.data["message"]!="wilderness"){
     window.location.replace('/dubai');
 
   }else if(result.data["luggage"] == "backpack"
