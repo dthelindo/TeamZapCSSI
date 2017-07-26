@@ -74,6 +74,7 @@ window.survey = new Survey.Model({ questions: [
 ]});
 survey.onComplete.add(function(result) {
 	document.querySelector('#surveyResult').innerHTML = "result: " + JSON.stringify(result.data);
+  document.querySelector('#surveyResult').innerHTML = "food: " + JSON.stringify(result.data['food']);
 });
 
 
