@@ -96,6 +96,14 @@ survey.onComplete.add(function(result) {
    }
   }
 
+
+
+
+
+
+
+
+
   }else if(result.data["luggage"]=="briefcase" || result.data["luggage"]=="purse" ||result.data["luggage"]=="luggage"
       && result.data["stay"]=="airbnb" || result.data["stay"]=="resort" || result.data["stay"]=="luxury"
       && result.data["budget"]!="little"
@@ -112,6 +120,16 @@ survey.onComplete.add(function(result) {
       && result.data["essential"]!="hiking shoes"
       && result.data["message"]!="wilderness"){
     window.location.replace('/dubai');*/
+
+
+
+
+
+
+
+
+
+
 
   if(result.data["luggage"] == "backpack"
   && result.data["food"] != "sushi"
