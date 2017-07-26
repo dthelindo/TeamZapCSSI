@@ -101,17 +101,33 @@ survey.onComplete.add(function(result) {
   }else if(result.data["food"] == "sushi" || result.data["food"] == "pizza" && result.data["souvenir"] == "rose" && result.data["budget"] == "a lot"){
     window.location.replace('/dubai');
 
-  }else if(result.data["luggage"] == "backpack" || result.data["food"] == "sushi" || result.data["food"] == "pizza" && result.data["souvenir"] == "rose" && result.data["budget"] == "normal"){
-    window.location.replace('/newzealand');
+  }else if(result.data["luggage"] == "backpack"
+  && result.data["food"] != "sushi"
+  && result.data["souvenir"] == "rose"
+  && result.data["budget"] == "normal"
+  && result.data["stay"] == "tent"
+  ){window.location.replace('/newzealand');
 
-  }else if(result.data["luggage"] == "backpack" && result.data["souvenir"] == "rose" && result.data["budget"] == "normal"){
-    window.location.replace('/canada');
+  }else if(result.data["luggage"] == "backpack"
+  && result.data["souvenir"] == "rose"
+  && result.data["budget"] == "normal"
+  && result.data["stay"] == "tent"
+  ){window.location.replace('/canada');
 
-  }else if(result.data["food"] != "sushi" || && result.data["souvenir"] == "rose" && result.data["budget"] == "little" && result.data["bucketlist"] == "touristy"){
-    window.location.replace('/mexicocity');
+  }else if(result.data["luggage"] != "briefcase"
+  && result.data["food"] != "sushi"
+  && result.data["souvenir"] == "rose"
+  && result.data["budget"] == "little"
+  && result.data["bucketlist"] == "touristy"
+  && result.data["stay"] == "airbnb"
+  ){window.location.replace('/mexicocity');
 
-  } else if(result.data["food"] == "sushi" || result.data["food"] == "pizza" && result.data["souvenir"] == "rose" && result.data["budget"] == "little"){
-    window.location.replace('/iceland');
+  } else if(
+    result.data["luggage"] != "briefcase"
+    && result.data["souvenir"] == "totem"
+    && result.data["budget"] == "little"
+    && result.data["stay"] == "airbnb"
+    ){window.location.replace('/iceland');
 
   }else{
     window.location.replace('/')
