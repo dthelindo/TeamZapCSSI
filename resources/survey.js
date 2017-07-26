@@ -49,7 +49,7 @@ window.survey = new Survey.Model({ questions: [
               {value: "hiking shoes", text: "../resources/hiking.png"},
               {value: "drink", text: "../resources/wine-bottle.png"}
            ]
-        }, { type: "dropdown", name: "luggage", renderAs: "imagepicker", title: "You send a message to a friend during your vacation. What would you say?",
+        }, { type: "dropdown", name: "message", renderAs: "imagepicker", title: "You send a message to a friend during your vacation. What would you say?",
            choices: [
               {value: "wilderness", text: "../resources/wilderness.png"},
               {value: "tanline", text: "../resources/tanline.png"},
@@ -63,7 +63,7 @@ window.survey = new Survey.Model({ questions: [
               {value: "steak", text: "../resources/steak.png"},
               {value: "purse", text: "../resources/salad.png"},
            ]
-        }, { type: "dropdown", name: "food", renderAs: "imagepicker", title: "A souvenir shop! What are you buying?",
+        }, { type: "dropdown", name: "souvenir", renderAs: "imagepicker", title: "A souvenir shop! What are you buying?",
            choices: [
               {value: "diamond", text: "../resources/diamond.png"},
               {value: "rose", text: "../resources/rose.png"},
