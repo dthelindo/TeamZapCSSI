@@ -74,9 +74,9 @@ window.survey = new Survey.Model({ questions: [
 ]});
 survey.onComplete.add(function(result) {
 	document.querySelector('#surveyResult').innerHTML = "result: " + JSON.stringify(result.data);
-  //document.querySelector('#surveyResult').innerHTML = "food: " + JSON.stringify(result.data['food']);
-  if(result.data["luggage"]=="briefcase" || result.data["luggage"]=="purse" ||result.data["luggage"]=="luggage"
-      && result.data["stay"]=="luxury"
+
+  if(result.data["luggage"]=="briefcase" || result.data["luggage"]=="purse" || result.data["luggage"]=="luggage"
+      && result.data["stay"]=="luxury" || result.data["stay"]=="resort"
       && result.data["budget"]=="a lot"
       && result.data["bucketList"]!="outdoors" && result.data["bucketList"]!="beach"
       && result.data["essential"]=="phone" || result.data["essential"]=="coffee"
@@ -85,12 +85,19 @@ survey.onComplete.add(function(result) {
       && result.data["souvenir"]=="diamond" || result.data["souvenir"]=="rose"){
     window.location.replace('/maldives');
 
-  }else if(result.data["food"] == "sushi" || result.data["food"] == "pizza" && result.data["souvenir"] == "rose" && result.data["budget"] == "a lot"){
+  }else if(result.data["luggage"]=="purse" || result.data["luggage"]=="luggage"
+      && result.data["stay"]=="luxury"
+      && result.data["budget"]=="a lot"
+      && result.data["bucketList"]!="touristy"
+      && result.data["essential"]=="phone" || result.data["essential"]=="camera" || result.data["essential"]=="drink"
+      && result.data["message"]=="restaurant" || result.data["message"]=="tanline"
+      && result.data["food"]=="steak" || result.data["food"]=="salad"
+      && result.data["souvenir"]=="diamond" || result.data["souvenir"]=="rose"){
     window.location.replace('/santorini');
 
   }else if(result.data["luggage"]=="briefcase" || result.data["luggage"]=="purse" ||result.data["luggage"]=="luggage"
-      && result.data["stay"]=="luxury"
-      && result.data["budget"]=="a lot"
+      && result.data["stay"]=="airbnb" || result.data["stay"]=="resort"
+      && result.data["budget"]!="little"
       && result.data["bucketList"]!="outdoors" && result.data["bucketList"]!="beach"
       && result.data["essential"]=="phone" || result.data["essential"]=="coffee"
       && result.data["message"]=="restaurant" || result.data["message"]=="museums"
