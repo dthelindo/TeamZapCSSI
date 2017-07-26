@@ -33,6 +33,11 @@
     <div class="motto">
       <h3> Travel planning, <i>simplified</i>. </h3>
     </div>
+      {% if user %}
+      <h3><a href="/survey" style="text-decoration: none; color: black">Get Started</a></h3>
+      {% else %}
+        <h3><a href="{{log_url}}" style="text-decoration: none; color: black">Get Started</a></h3>
+      {% endif %}
   </div>
 
 
