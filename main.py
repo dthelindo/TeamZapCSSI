@@ -370,6 +370,46 @@ class SantoriniHandler(webapp2.RequestHandler):
         template = env.get_template("santorini.html")
         self.response.out.write(template.render(my_vars))
 
+class CanadaHandler(webapp2.RequestHandler):
+    def get(self):
+
+        interest = self.request.get("interest")
+        city = self.request.get("city")
+
+        if not interest:
+            interest = "Attractions"
+
+        if not city:
+            city = "Vancouver"
+
+        params = {
+                    "query" : interest+"in"+city,
+                    "key": "AIzaSyAd_wleTmel1WiMaeVNaDjc1-pPjEQV0Mg",
+                  }
+
+        query_text = urllib.urlencode(params)
+        api_url = "https://maps.googleapis.com/maps/api/place/textsearch/json?" + query_text
+
+        address_response = urllib2.urlopen(api_url)
+        content = address_response.read()
+        content_dict = json.loads(content)
+
+        places_list = []
+        placescount = 0
+
+        for item in content_dict["results"]:
+            place_list = [ item["name"], item["formatted_address"]]
+
+            placescount += 1
+            if placescount < 11:
+                places_list.append(place_list)
+
+        my_vars = {
+                    "places_list": places_list,
+                  }
+        template = env.get_template("canada.html")
+        self.response.out.write(template.render(my_vars))
+
 class TeamHandler(webapp2.RequestHandler):
     def get(self):
         template = env.get_template("team.html")
