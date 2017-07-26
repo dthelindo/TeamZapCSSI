@@ -115,7 +115,7 @@ survey.onComplete.add(function(result) {
    }
   });
 
-  /*}else if(result.data["luggage"]=="briefcase" || result.data["luggage"]=="purse" ||result.data["luggage"]=="luggage"
+  }else if(result.data["luggage"]=="briefcase" || result.data["luggage"]=="purse" ||result.data["luggage"]=="luggage"
       && result.data["stay"]=="airbnb" || result.data["stay"]=="resort" || result.data["stay"]=="luxury"
       && result.data["budget"]!="little"
       && result.data["bucketList"]!="shopping"
@@ -132,7 +132,7 @@ survey.onComplete.add(function(result) {
       && result.data["message"]!="wilderness"){
     window.location.replace('/dubai');
 
-  }else if(result.data["luggage"] == "backpack"
+  if(result.data["luggage"] == "backpack"
   && result.data["food"] != "sushi"
   && result.data["souvenir"] == "rose"
   && result.data["budget"] == "normal"
@@ -164,7 +164,7 @@ survey.onComplete.add(function(result) {
     window.location.replace('/')
   }
 
-});*/
+});
 
 
 var widget = {
