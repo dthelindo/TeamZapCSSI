@@ -13,13 +13,18 @@
 
 <body>
 
-  <div class="buttons">
-    {% if user %}
-    <a href="{{log_url}}" class="button" style="text-decoration: none; color: black">LOGOUT</a>
-    {% else %}
-    <a href="{{log_url}}" class="button" style="text-decoration: none; color: black">LOGIN</a>
-    {% endif %}
+  <div>
+    <div class="buttons">
+      {% if user %}
+      <a href="{{log_url}}" class="button" id="logoutButton"style="text-decoration: none; color: black">LOGOUT</a>
+      </div>
+      <p id="greeting">Welcome, {{name}}!</p>
+      {% else %}
+      <a href="{{log_url}}" class="button" style="text-decoration: none; color: black">LOGIN</a>
+      </div>
+      {% endif %}
   </div>
+
 
   <div class="options">
     <h2> + ABOUT </h2>

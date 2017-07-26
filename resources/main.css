@@ -84,3 +84,9 @@ h3{
 h1 a:hover{
   color: white;
 }
+
+#greeting{
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  margin-left: 10px;
+}

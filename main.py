@@ -28,8 +28,10 @@ class Login(ndb.Model):
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         cur_user = users.get_current_user()
+        name = None
         if cur_user:
             log_url = users.create_logout_url('/')
+            name = cur_user.nickname().split('@')[0]
         else:
             log_url = users.create_login_url('/')
         template = env.get_template('main.html')
@@ -50,6 +52,7 @@ class MainHandler(webapp2.RequestHandler):
             'user': cur_user,
             'log_url': log_url,
             'login': login,
+            'name': name,
         }
         self.response.out.write(template.render(variables))
 
