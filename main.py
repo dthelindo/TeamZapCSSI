@@ -12,25 +12,44 @@ import webapp2
 
 env = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.dirname(__file__) + '/templates'))
 
-
+'''
 class Trip(ndb.Model):
     country = ndb.StringProperty()
     state = ndb.StringProperty()
     city = ndb.StringProperty()
     date = ndb.DateProperty()
+'''
 
 class Login(ndb.Model):
-    user_email = ndb.StringProperty(indexed=True)
-    #password = ndb.StringProperty(indexed=True)
+    user_email = ndb.StringProperty()
+    #password = ndb.StringProperty()
 
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         cur_user = users.get_current_user()
+        if cur_user:
+            log_url = users.create_logout_url('/')
+        else:
+            log_url = users.create_login_url('/')
         template = env.get_template('main.html')
+
+        login = None
+        if cur_user:
+            login_key = ndb.Key('Login', cur_user.nickname())
+            login = login_key.get()
+
+            if not login:
+                login = Login(
+                        user_email = cur_user.nickname()
+                )
+            login.key = login_key
+            login.put()
+
         variables = {
             'user': cur_user,
-            #'log_url': log_url,
+            'log_url': log_url,
+            'login': login,
         }
         self.response.out.write(template.render(variables))
 

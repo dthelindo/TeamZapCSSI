@@ -14,10 +14,11 @@
 <body>
 
   <div class="buttons">
-    <a href="#" class="button" style="text-decoration: none">LOGIN</a>
-  </div>
-  <div class="buttons2">
-    <a href="#" class="button" style="text-decoration: none">LOGOUT</a>
+    {% if user %}
+    <a href="{{log_url}}" class="button" style="text-decoration: none">LOGOUT</a>
+    {% else %}
+    <a href="{{log_url}}" class="button" style="text-decoration: none">LOGIN</a>
+    {% endif %}
   </div>
 
   <div class="options">
