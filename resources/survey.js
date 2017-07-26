@@ -79,7 +79,10 @@ survey.onComplete.add(function(result) {
       && result.data["stay"]=="luxury"
       && result.data["budget"]=="a lot"
       && result.data["bucketList"]!="outdoors" && result.data["bucketList"]!="beach"
-      && result.data["essential"]=="phone" || result.data["essential"]=="coffee"){
+      && result.data["essential"]=="phone" || result.data["essential"]=="coffee"
+      && result.data["message"]=="restaurant" || result.data["message"]=="museums"
+      && result.data["food"]=="sushi" || result.data["food"]=="salad"
+      && result.data["souvenir"]=="diamond" || result.data["souvenir"]=="rose"){
     window.location.replace('/hongkong');
   }else if(result.data["food"] == "sushi" || result.data["food"] == "pizza" && result.data["souvenir"] == "rose" && result.data["budget"] == "a lot"){
     window.location.replace('/hongkong');
