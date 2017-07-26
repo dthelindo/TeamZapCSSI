@@ -90,7 +90,11 @@ class DubaiHandler(webapp2.RequestHandler):
         interest = self.request.get("interest")
         city = self.request.get("city")
 
+        if not interest:
+            interest = "Hotels"
 
+        if not city:
+            city = "Dubai"
 
 #To set a default you will need an "if not" statement
         params = {
@@ -116,7 +120,7 @@ class DubaiHandler(webapp2.RequestHandler):
             place_list = [ item["name"], item["formatted_address"]]
 
             placescount += 1
-            if placescount < 19:
+            if placescount < 11:
                 places_list.append(place_list)
 
         my_vars = {
