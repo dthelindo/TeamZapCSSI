@@ -61,7 +61,7 @@ window.survey = new Survey.Model({ questions: [
               {value: "sushi", text: "../resources/sushi.png"},
               {value: "pizza", text: "../resources/pizza.png"},
               {value: "steak", text: "../resources/steak.png"},
-              {value: "purse", text: "../resources/salad.png"},
+              {value: "salad", text: "../resources/salad.png"},
            ]
         }, { type: "dropdown", name: "souvenir", renderAs: "imagepicker", title: "A souvenir shop! What are you buying?",
            choices: [
@@ -74,7 +74,28 @@ window.survey = new Survey.Model({ questions: [
 ]});
 survey.onComplete.add(function(result) {
 	document.querySelector('#surveyResult').innerHTML = "result: " + JSON.stringify(result.data);
-  document.querySelector('#surveyResult').innerHTML = "food: " + JSON.stringify(result.data['food']);
+  //document.querySelector('#surveyResult').innerHTML = "food: " + JSON.stringify(result.data['food']);
+  if(result.data["luggage"]=="briefcase" || result.data["luggage"]=="purse" ||result.data["luggage"]=="luggage"
+      &&){
+    window.location.replace('/hongkong');
+  }else if(result.data["food"] == "sushi" || result.data["food"] == "pizza" && result.data["souvenir"] == "rose" && result.data["budget"] == "a lot"){
+    window.location.replace('/hongkong');
+  }else if(result.data["food"] == "sushi" || result.data["food"] == "pizza" && result.data["souvenir"] == "rose" && result.data["budget"] == "a lot"){
+    window.location.replace('/hongkong');
+  }else if(result.data["food"] == "sushi" || result.data["food"] == "pizza" && result.data["souvenir"] == "rose" && result.data["budget"] == "a lot"){
+    window.location.replace('/hongkong');
+  }else if(result.data["food"] == "sushi" || result.data["food"] == "pizza" && result.data["souvenir"] == "rose" && result.data["budget"] == "a lot"){
+    window.location.replace('/hongkong');
+  }else if(result.data["food"] == "sushi" || result.data["food"] == "pizza" && result.data["souvenir"] == "rose" && result.data["budget"] == "a lot"){
+    window.location.replace('/hongkong');
+  }else if(result.data["food"] == "sushi" || result.data["food"] == "pizza" && result.data["souvenir"] == "rose" && result.data["budget"] == "a lot"){
+    window.location.replace('/hongkong');
+  } else if(result.data["food"] == "sushi" || result.data["food"] == "pizza" && result.data["souvenir"] == "rose" && result.data["budget"] == "a lot"){
+    window.location.replace('/hongkong');
+  }else{
+    window.location.replace('/')
+  }
+
 });
 
 
