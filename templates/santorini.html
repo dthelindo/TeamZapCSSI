@@ -23,6 +23,26 @@
     src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDfmgpRu0R7vb8OlC5ycX448N6jv1dkC2c&q=Imerovigli&zoom=12" allowfullscreen>
     </iframe>
 </div>
+<div class="point_of_interest">
+      <form method="get">
+        Search:
+      <input type="text" name="interest" placeholder="Hotels"> in
+      <input type="text" name="city" placeholder="Santorini">
+
+      <input type="submit" value="Search in Google Places">
+    </form>
+</div>
+
+<hr/>
+
+<div class="address">
+      {% for place in places_list %}
+        <p> {{ place[0] }}  :
+          <br>{{ place[1] }}</p>
+          <br> <br>
+
+      {% endfor %}
+  </div>
 
 
 </body>
