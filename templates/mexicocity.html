@@ -23,6 +23,26 @@
     </iframe>
 </div>
 
+<div class="point_of_interest">
+      <form method="get">
+        Search:
+      <input type="text" name="interest" placeholder="Hotels"> in
+      <input type="text" name="city" placeholder="Mexico City">
+
+      <input type="submit" value="Search in Google Places">
+    </form>
+</div>
+
+<hr/>
+
+<div class="address">
+      {% for place in places_list %}
+        <p> {{ place[0] }}  :
+          <br>{{ place[1] }}</p>
+          <br> <br>
+
+      {% endfor %}
+  </div>
 
 </body>
 

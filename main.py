@@ -91,12 +91,175 @@ class DubaiHandler(webapp2.RequestHandler):
         city = self.request.get("city")
 
         if not interest:
-            interest = "Hotels"
+            interest = "Attractions"
 
         if not city:
             city = "Dubai"
 
+        params = {
+                    "query" : interest+"in"+city,
+                    "key": "AIzaSyAd_wleTmel1WiMaeVNaDjc1-pPjEQV0Mg",
+                  }
+
+        query_text = urllib.urlencode(params)
+        api_url = "https://maps.googleapis.com/maps/api/place/textsearch/json?" + query_text
+
+        address_response = urllib2.urlopen(api_url)
+        content = address_response.read()
+        content_dict = json.loads(content)
+
+        places_list = []
+        placescount = 0
+
+        for item in content_dict["results"]:
+            place_list = [ item["name"], item["formatted_address"]]
+
+            placescount += 1
+            if placescount < 11:
+                places_list.append(place_list)
+
+        my_vars = {
+                    "places_list": places_list,
+                  }
+
+        self.response.out.write(template.render(my_vars))
+
+class HongKongHandler(webapp2.RequestHandler):
+    def get(self):
+        template = env.get_template("hongkong.html")
+
+        interest = self.request.get("interest")
+        city = self.request.get("city")
+
+        if not interest:
+            interest = "Attractions"
+
+        if not city:
+            city = "Hong Kong"
+
+        params = {
+                    "query" : interest+"in"+city,
+                    "key": "AIzaSyAd_wleTmel1WiMaeVNaDjc1-pPjEQV0Mg",
+                  }
+
+        query_text = urllib.urlencode(params)
+        api_url = "https://maps.googleapis.com/maps/api/place/textsearch/json?" + query_text
+
+        address_response = urllib2.urlopen(api_url)
+        content = address_response.read()
+        content_dict = json.loads(content)
+
+        places_list = []
+        placescount = 0
+
+        for item in content_dict["results"]:
+            place_list = [ item["name"], item["formatted_address"]]
+
+            placescount += 1
+            if placescount < 11:
+                places_list.append(place_list)
+
+        my_vars = {
+                    "places_list": places_list,
+                  }
+
+        self.response.out.write(template.render(my_vars))
+
+class IcelandHandler(webapp2.RequestHandler):
+    def get(self):
+        template = env.get_template("iceland.html")
+
+        interest = self.request.get("interest")
+        city = self.request.get("city")
+
+        if not interest:
+            interest = "Attractions"
+
+        if not city:
+            city = "icealand"
+
+        params = {
+                    "query" : interest+"in"+city,
+                    "key": "AIzaSyAd_wleTmel1WiMaeVNaDjc1-pPjEQV0Mg",
+                  }
+
+        query_text = urllib.urlencode(params)
+        api_url = "https://maps.googleapis.com/maps/api/place/textsearch/json?" + query_text
+
+        address_response = urllib2.urlopen(api_url)
+        content = address_response.read()
+        content_dict = json.loads(content)
+
+        places_list = []
+        placescount = 0
+
+        for item in content_dict["results"]:
+            place_list = [ item["name"], item["formatted_address"]]
+
+            placescount += 1
+            if placescount < 11:
+                places_list.append(place_list)
+
+        my_vars = {
+                    "places_list": places_list,
+                  }
+
+        self.response.out.write(template.render(my_vars))
+
+class MaldivesHandler(webapp2.RequestHandler):
+    def get(self):
+        template = env.get_template("maldives.html")
+
+        interest = self.request.get("interest")
+        city = self.request.get("city")
+
+        if not interest:
+            interest = "Attractions"
+
+        if not city:
+            city = "maldives"
+
+        params = {
+                    "query" : interest+"in"+city,
+                    "key": "AIzaSyAd_wleTmel1WiMaeVNaDjc1-pPjEQV0Mg",
+                  }
+
+        query_text = urllib.urlencode(params)
+        api_url = "https://maps.googleapis.com/maps/api/place/textsearch/json?" + query_text
+
+        address_response = urllib2.urlopen(api_url)
+        content = address_response.read()
+        content_dict = json.loads(content)
+
+        places_list = []
+        placescount = 0
+
+        for item in content_dict["results"]:
+            place_list = [ item["name"], item["formatted_address"]]
+
+            placescount += 1
+            if placescount < 11:
+                places_list.append(place_list)
+
+        my_vars = {
+                    "places_list": places_list,
+                  }
+
+        self.response.out.write(template.render(my_vars))
+
+class MexicoCityHandler(webapp2.RequestHandler):
+    def get(self):
+        interest = self.request.get("interest")
+        city = self.request.get("city")
+
+        if not interest:
+            interest = "Attractions"
+
+        if not city:
+            city = "mexico city"
 #To set a default you will need an "if not" statement
+
+
         params = {
                     "query" : interest+"in"+city,
                     "key": "AIzaSyAd_wleTmel1WiMaeVNaDjc1-pPjEQV0Mg",
@@ -126,29 +289,12 @@ class DubaiHandler(webapp2.RequestHandler):
         my_vars = {
 
             "places_list": places_list,
+            #"fotos_list": fotos_list,
         }
 
-        self.response.out.write(template.render(my_vars))
-
-class HongKongHandler(webapp2.RequestHandler):
-    def get(self):
-        template = env.get_template("hongkong.html")
-        self.response.out.write(template.render())
-
-class IcelandHandler(webapp2.RequestHandler):
-    def get(self):
-        template = env.get_template("iceland.html")
-        self.response.out.write(template.render())
-
-class MaldivesHandler(webapp2.RequestHandler):
-    def get(self):
-        template = env.get_template("maldives.html")
-        self.response.out.write(template.render())
-
-class MexicoCityHandler(webapp2.RequestHandler):
-    def get(self):
         template = env.get_template("mexicocity.html")
-        self.response.out.write(template.render())
+
+        self.response.out.write(template.render(my_vars))
 
 class NewZealandHandler(webapp2.RequestHandler):
     def get(self):
