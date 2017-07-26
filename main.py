@@ -448,6 +448,7 @@ app = webapp2.WSGIApplication([
     ('/mexicocity', MexicoCityHandler),
     ('/newzealand', NewZealandHandler),
     ('/santorini', SantoriniHandler),
+    ('/canada', CanadaHandler),
     ('/team', TeamHandler),
     ('/about', AboutHandler),
     ('/contact', ContactHandler),
