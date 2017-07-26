@@ -58,14 +58,20 @@ h2 {
 }
 
 .btn-green:hover, .btn-green:focus {
-    background-color: #18a689;
+    background-color: #CC6B8E;
     color: #fff;
 }
 .btn-green {
   font-family: 'Lato', sans-serif;
-  color: #FFBEA3
+  color: #FFBEA3;
+}
+.thumbnail.selected{
+  background-color: #FFBEA3;
 }
 
+.sv_complete_btn{
+  color: black;
+}
 .panel-footer {
     text-align: right;
     background-color: #fff;

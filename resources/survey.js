@@ -63,7 +63,14 @@ window.survey = new Survey.Model({ questions: [
               {value: "steak", text: "../resources/steak.png"},
               {value: "purse", text: "../resources/salad.png"},
            ]
-        },
+        }, { type: "dropdown", name: "food", renderAs: "imagepicker", title: "A souvenir shop! What are you buying?",
+           choices: [
+              {value: "diamond", text: "../resources/diamond.png"},
+              {value: "rose", text: "../resources/rose.png"},
+              {value: "totem", text: "../resources/totem.png"},
+              {value: "surfing", text: "../resources/surf.png"},
+           ]
+        }
 ]});
 survey.onComplete.add(function(result) {
 	document.querySelector('#surveyResult').innerHTML = "result: " + JSON.stringify(result.data);

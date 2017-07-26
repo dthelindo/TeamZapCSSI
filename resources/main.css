@@ -2,9 +2,8 @@
 h1 {
   font-family: 'Dancing Script', cursive;
   font-size: 200px;
-  text-shadow: 4px 4px 4px #CC6B8E;
+  text-shadow: 4px 4px 4px #FFBEA3;
   text-align:center;
-  position: relative
 }
 
 body {
@@ -15,12 +14,71 @@ body {
     overflow: hidden;
 }
 
-#titles {
-  position: relative;
-  width: 640px;
-  height: 480px;
-  white-space: nowrap;
-  overflow: hidden;
+
+.options {
+    position: fixed;
+    text-align: left;
+    vertical-align: top;
+    margin-left: 83%;
+    margin-bottom: 55%;
+
+}
+
+.together {
+  position: fixed;
+  text-align: center;
+  padding-top: 2%;
+  padding-left: 33%;
+  height: 300px;
+}
+
+.motto{
+  margin-top: -180px;
+  margin-right: -550px;
+}
+
+.buttons {
+    color: black;
+    background-color: #FFBEA3;
+    border-radius: 25px;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+.buttons2 {
+    background-color: #FFBEA3;
+    border-radius: 25px;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+}
+
+h2{
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+}
+h3{
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  text-shadow: 4px 4px 4px #FFBEA3;
 }
 
 h1 a:hover{
