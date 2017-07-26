@@ -73,25 +73,15 @@ window.survey = new Survey.Model({ questions: [
         }
 ]});
 survey.onComplete.add(function(result) {
-  if(result.data["luggage"]=="purse" //|| result.data["luggage"]=="luggage"
-      && result.data["stay"]=="luxury"
+  /*if(result.data["luggage"]=="purse" || result.data["luggage"]=="luggage"
       && result.data["budget"]=="a lot"
+      && result.data["stay"]=="luxury"
       && result.data["bucketList"]!="outdoors" && result.data["bucketList"]!="beach"
       && result.data["essential"]=="phone" || result.data["essential"]=="coffee"
       && result.data["message"]=="restaurant" || result.data["message"]=="tanline"
       && result.data["food"]=="sushi" || result.data["food"]=="steak"
       && result.data["souvenir"]=="diamond" || result.data["souvenir"]=="rose"){
     window.location.replace('/maldives');
-
-  }else if(result.data["luggage"]=="purse" || result.data["luggage"]=="luggage"
-      && result.data["stay"]=="luxury"
-      && result.data["budget"]=="a lot"
-      && result.data["bucketList"]!="outdoors" && result.data["bucketList"]!="beach"
-      && result.data["essential"]=="phone" || result.data["essential"]=="coffee"
-      && result.data["message"]=="restaurant" || result.data["message"]=="tanline"
-      && result.data["food"]=="sushi" || result.data["food"]=="steak"
-      && result.data["souvenir"]=="diamond" || result.data["souvenir"]=="rose"){
-    window.location.replace('/santorini');
 
   }else if(result.data["luggage"]=="purse" || result.data["luggage"]=="luggage"
       && result.data["stay"]=="luxury"
@@ -102,9 +92,30 @@ survey.onComplete.add(function(result) {
       && result.data["message"]=="restaurant" || result.data["message"]=="tanline"
       && result.data["food"]=="steak" || result.data["food"]=="salad"
       && result.data["souvenir"]!="totem"){
-    window.location.replace('/santorini');
+    window.location.replace('/santorini');*/
 
-  }else if(result.data["luggage"]=="briefcase" || result.data["luggage"]=="purse" ||result.data["luggage"]=="luggage"
+    if(result.data["budget"]=="a lot" && result.data["stay"]=="luxury"){
+        if(result.data["luggage"]=="purse" || result.data["luggage"]=="luggage"){
+          if(result.data["food"]=="sushi"){
+          window.location.replace('/maldives');
+        } else if(result.data["food"]=="salad"){
+          window.location.replace('/santorini');
+        } else if(result.data["food"]=="steak"){
+            if(result.data["essential"]=="coffee"){
+            window.location.replace('/maldives');
+          } else if(result.data["essential"]=="drink" || result.data["essential"]=="camera"){
+            window.location.replace('/santorini');
+          } else{
+            window.loaction.replace('/maldives');
+          }
+        }
+    }
+    }else{
+      window.location.replace('/');
+   }
+  });
+
+  /*}else if(result.data["luggage"]=="briefcase" || result.data["luggage"]=="purse" ||result.data["luggage"]=="luggage"
       && result.data["stay"]=="airbnb" || result.data["stay"]=="resort" || result.data["stay"]=="luxury"
       && result.data["budget"]!="little"
       && result.data["bucketList"]!="shopping"
@@ -153,7 +164,7 @@ survey.onComplete.add(function(result) {
     window.location.replace('/')
   }
 
-});
+});*/
 
 
 var widget = {
