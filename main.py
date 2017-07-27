@@ -22,7 +22,6 @@ class Trip(ndb.Model):
 
 class Login(ndb.Model):
     user_email = ndb.StringProperty()
-    #password = ndb.StringProperty()
 
 
 class MainHandler(webapp2.RequestHandler):
