@@ -105,6 +105,16 @@ survey.onComplete.add(function(result) {
         window.location.replace('/dubai');
       } else if(result.data["stay"]=="tent"){
         window.location.replace('/dubai');
+      } else if(result.data["luggage"] == "backpack"){
+          if(result.data["food"] != "sushi"){
+            if(result.data["stay"] == "tent"){
+              if(result.data["essential"] == "phone"){
+                window.location.replace('/newzealand');
+              }else if(result.data["essential"] == "camera"){
+                window.location.replace('/canada');
+               }
+            }
+          }
       } else{
         window.location.replace('/hongkong');
       }
