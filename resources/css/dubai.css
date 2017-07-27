@@ -6,9 +6,13 @@ h1 {
   text-shadow: 4px 4px 4px #D25049;
   text-align:center;
   position: relative
+  left: 0; // This one is important!
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.1s;
+  -webkit-animation-delay: 0.8s;
 }
-
-
 
 .bgimg-1  {
   position: relative;
@@ -45,10 +49,10 @@ h2 {
   color: white;
   text-align: left;
   vertical-align: top;
-  position: relative
-}
+  position: relative;
+  }
 
-#match{
+.match{
   font-family: 'Dancing Script', cursive;
   font-size: 50px;
   color: #EDE3E6;
@@ -56,6 +60,7 @@ h2 {
   text-align:center;
   position: relative;
   transform: translateY(100px);
+  margin-bottom: -4%;
 }
 
 .flexDiv{

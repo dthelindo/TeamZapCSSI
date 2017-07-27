@@ -5,7 +5,13 @@ h1 {
   color: #EDE3E6;
   text-shadow: 4px 4px 4px #2E450B;
   text-align:center;
-  position: relative
+  position: relative;
+  left: 0; // This one is important!
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.1s;
+  -webkit-animation-delay: 0.8s;
 }
 
 
@@ -48,7 +54,7 @@ h2 {
   position: relative
 }
 
-#match{
+.match{
   font-family: 'Dancing Script', cursive;
   font-size: 50px;
   color: #EDE3E6;
@@ -56,6 +62,7 @@ h2 {
   text-align:center;
   position: relative;
   transform: translateY(100px);
+  margin-bottom: -9%;
 }
 
 .flexDiv{
