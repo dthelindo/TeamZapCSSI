@@ -46,7 +46,7 @@ h1 {
 
 .bgimg-2 {
   background-color: : white;
-  max-height: 20px;
+  max-height: 150px;
   z-index: 0;
 }
 
@@ -74,15 +74,6 @@ a{
   font-weight: 600;
 }
 
-h6 {
-  font-family: 'Lato', sans-serif;
-  font-size: 40px;
-  font-weight: 300;
-  margin-bottom: 50px;
-  margin-top: 50px;
-  padding-left: 2%;
-  }
-
 
 h2 {
   font-family: 'Dancing Script', cursive;
@@ -99,3 +90,34 @@ h2 {
   padding-right: 5%;
   padding-left: 2%;
 }
+
+#title {
+  font-family: 'Lato', sans-serif;
+  font-size: 40px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  padding-left: 50%;
+  margin-top: 50px;
+  text-align: right;
+  padding-left: 1%;
+  }
+
+#moveit{
+  font-family: 'Lato', sans-serif;
+  font-size: 40px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  padding-left: 2%;
+  margin-top: 50px;
+  text-align: right;
+  }
+
+
+#moveit2{
+  font-family: 'Lato', sans-serif;
+  font-size: 40px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  margin-top: 50px;
+  text-align: left;
+  padding-left: 39%;}

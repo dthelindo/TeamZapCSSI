@@ -12,6 +12,7 @@ h1 {
   -o-transition: 0.5s;
   transition: 0.1s;
   -webkit-animation-delay: 0.8s;
+  margin-bottom: 0px;
 }
 
 
@@ -32,21 +33,6 @@ h1 {
   position: relative;
 }
 
-.bgimg-2 {
-  background-color: : white;
-  min-height: 100%;
-  z-index: 0;
-}
-
-
-
-h2 {
-  font-family: 'Dancing Script', cursive;
-  font-size: 40px;
-  text-align: left;
-  vertical-align: top;
-  position: relative
-}
 
 .match{
   font-family: 'Dancing Script', cursive;
@@ -59,7 +45,83 @@ h2 {
   margin-bottom: -9%;
 }
 
+
+.bgimg-2 {
+  background-color: : white;
+  max-height: 150px;
+  z-index: 0;
+}
+
+.bgimg-3 {
+  background-color: : white;
+  min-height: 99%;
+  z-index: 0;
+}
+
+.point_of_interest {
+  width: "100%";
+  height: "450";
+}
+
+p{
+  font-family: 'Lato', sans-serif;
+}
+
+a{
+  color: #FFBEA3;
+}
+
+::-webkit-input-placeholder {
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+}
+
+
+h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 40px;
+  color: white;
+  text-align: left;
+  vertical-align: top;
+  position: relative;
+  }
+
 .flexDiv{
   display: flex;
   justify-content: space-between;
+  padding-right: 5%;
+  padding-left: 2%;
 }
+
+
+
+#title {
+  font-family: 'Lato', sans-serif;
+  font-size: 40px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  padding-left: 50%;
+  margin-top: 50px;
+  text-align: right;
+  padding-left: 1%;
+  }
+
+#moveit{
+  font-family: 'Lato', sans-serif;
+  font-size: 40px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  padding-left: 2%;
+  margin-top: 50px;
+  text-align: right;
+  }
+
+
+#moveit2{
+  font-family: 'Lato', sans-serif;
+  font-size: 40px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  margin-top: 50px;
+  text-align: left;
+  padding-left: 39%;}

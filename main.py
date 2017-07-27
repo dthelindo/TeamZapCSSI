@@ -239,6 +239,7 @@ class MaldivesHandler(webapp2.RequestHandler):
         content = address_response.read()
         content_dict = json.loads(content)
 
+
         places_list = []
         placescount = 0
         photo = ''
@@ -246,6 +247,7 @@ class MaldivesHandler(webapp2.RequestHandler):
         for item in content_dict["results"]:
             photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&key=AIzaSyDfmgpRu0R7vb8OlC5ycX448N6jv1dkC2c&photoreference=" + item["photos"][0]["photo_reference"]
             place_list = [ item["name"], item["formatted_address"], photo_url]
+
 
             placescount += 1
             if placescount < 6:
@@ -259,57 +261,6 @@ class MaldivesHandler(webapp2.RequestHandler):
 
 class MexicoCityHandler(webapp2.RequestHandler):
     def get(self):
-        interest = self.request.get("interest")
-        city = self.request.get("city")
-
-        if not interest:
-            interest = "Hotels"
-
-        if not city:
-            city = "mexico city"
-#To set a default you will need an "if not" statement
-
-
-        params = {
-                    "query" : interest+"in"+city,
-                    "height" : 853,
-                    "width" : 1280,
-                    "key": "AIzaSyBm7yeTJxedophanMs4cfii4wljJRsE_gQ",
-                }
-
-        query_text = urllib.urlencode(params)
-        api_url = "https://maps.googleapis.com/maps/api/place/textsearch/json?" + query_text
-
-
-        address_response = urllib2.urlopen(api_url)
-        content = address_response.read()
-        content_dict = json.loads(content)
-
-
-        places_list = []
-        placescount = 0
-        photo = ''
-
-
-        for item in content_dict["results"]:
-            photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&key=AIzaSyDfmgpRu0R7vb8OlC5ycX448N6jv1dkC2c&photoreference=" + item["photos"][0]["photo_reference"]
-            place_list = [ item["name"], item["formatted_address"], photo_url]
-
-            placescount += 1
-            if placescount < 6:
-                places_list.append(place_list)
-
-        my_vars = {
-
-            "places_list": places_list,
-            #"fotos_list": fotos_list,
-        }
-
-        template = env.get_template("mexicocity.html")
-        self.response.out.write(template.render(my_vars))
-
-class NewZealandHandler(webapp2.RequestHandler):
-    def get(self):
 
         interest = self.request.get("interest")
         city = self.request.get("city")
@@ -318,7 +269,7 @@ class NewZealandHandler(webapp2.RequestHandler):
             interest = "Hotels"
 
         if not city:
-            city = "New Zealand"
+            city = "mexicocity"
 
         params = {
                     "query" : interest+"in"+city,
@@ -334,6 +285,7 @@ class NewZealandHandler(webapp2.RequestHandler):
         content = address_response.read()
         content_dict = json.loads(content)
 
+
         places_list = []
         placescount = 0
         photo = ''
@@ -341,6 +293,53 @@ class NewZealandHandler(webapp2.RequestHandler):
         for item in content_dict["results"]:
             photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&key=AIzaSyDfmgpRu0R7vb8OlC5ycX448N6jv1dkC2c&photoreference=" + item["photos"][0]["photo_reference"]
             place_list = [ item["name"], item["formatted_address"], photo_url]
+
+
+            placescount += 1
+            if placescount < 6:
+                places_list.append(place_list)
+
+        my_vars = {
+                    "places_list": places_list,
+                  }
+        template = env.get_template("mexicocity.html")
+        self.response.out.write(template.render(my_vars))
+
+class NewZealandHandler(webapp2.RequestHandler):
+    def get(self):
+
+        interest = self.request.get("interest")
+        city = self.request.get("city")
+
+        if not interest:
+            interest = "Hotels"
+
+        if not city:
+            city = "auckland"
+
+        params = {
+                    "query" : interest+"in"+city,
+                    "height" : 853,
+                    "width" : 1280,
+                    "key": "AIzaSyBm7yeTJxedophanMs4cfii4wljJRsE_gQ",
+                  }
+
+        query_text = urllib.urlencode(params)
+        api_url = "https://maps.googleapis.com/maps/api/place/textsearch/json?" + query_text
+
+        address_response = urllib2.urlopen(api_url)
+        content = address_response.read()
+        content_dict = json.loads(content)
+
+
+        places_list = []
+        placescount = 0
+        photo = ''
+
+        for item in content_dict["results"]:
+            photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&key=AIzaSyDfmgpRu0R7vb8OlC5ycX448N6jv1dkC2c&photoreference=" + item["photos"][0]["photo_reference"]
+            place_list = [ item["name"], item["formatted_address"], photo_url]
+
 
             placescount += 1
             if placescount < 6:
@@ -362,7 +361,7 @@ class SantoriniHandler(webapp2.RequestHandler):
             interest = "Hotels"
 
         if not city:
-            city = "Santorini"
+            city = "santorini"
 
         params = {
                     "query" : interest+"in"+city,
@@ -378,11 +377,15 @@ class SantoriniHandler(webapp2.RequestHandler):
         content = address_response.read()
         content_dict = json.loads(content)
 
+
         places_list = []
         placescount = 0
+        photo = ''
 
         for item in content_dict["results"]:
-            place_list = [ item["name"], item["formatted_address"]]
+            photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&key=AIzaSyDfmgpRu0R7vb8OlC5ycX448N6jv1dkC2c&photoreference=" + item["photos"][0]["photo_reference"]
+            place_list = [ item["name"], item["formatted_address"], photo_url]
+
 
             placescount += 1
             if placescount < 6:
