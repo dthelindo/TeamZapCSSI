@@ -147,9 +147,9 @@ survey.onComplete.add(function(result) {
             }else if(result.data["essential"] == "camera"){
               window.location.replace('/canada');
              }
+          }
+        }
       }
-    }
-  }
 
 
 
