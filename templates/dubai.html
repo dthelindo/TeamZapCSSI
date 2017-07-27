@@ -15,36 +15,40 @@
       <h3 id="match"> You've been matched! </h3>
       <h1> Dubai </h1>
 </div>
-<div class="bgimg-2">
-  <iframe
-  width="50%"
-  height="450"
-  frameborder="0" style="border:0"
-  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDfmgpRu0R7vb8OlC5ycX448N6jv1dkC2c&q=burj+khalifa&zoom=12" allowfullscreen>
-  </iframe>
-</div>
 
-<div class="point_of_interest">
-      <form method="get">
-        Search:
-      <input type="text" name="interest" placeholder="Hotels"> in
-      <input type="text" name="city" placeholder="Dubai">
-
-      <input type="submit" value="Search in Google Places">
-    </form>
-</div>
-
-<hr/>
-
-<div class="address">
-      {% for place in places_list %}
-        <p> {{ place[0] }}  :
-          <br>{{ place[1] }}</p>
-          <br> <br>
-
-      {% endfor %}
+<div class="flexDiv">
+  <div class="bgimg-2">
+    <iframe
+    width="300%"
+    height="450"
+    frameborder="0" style="border:0"
+    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDfmgpRu0R7vb8OlC5ycX448N6jv1dkC2c&q=burj+khalifa&zoom=12" allowfullscreen>
+    </iframe>
   </div>
 
+  <div>
+    <div class="point_of_interest">
+          <form method="get">
+            Search:
+          <input type="text" name="interest" placeholder="Hotels"> in
+          <input type="text" name="city" placeholder="Dubai">
+
+          <input type="submit" value="Search in Google Places">
+        </form>
+    </div>
+
+    <hr/>
+
+    <div class="address">
+          {% for place in places_list %}
+            <p> {{ place[0] }}  :
+              <br>{{ place[1] }}</p>
+              <br> <br>
+
+          {% endfor %}
+      </div>
+    </div>
+</div>
 </body>
 
 </html>
