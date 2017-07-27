@@ -68,7 +68,7 @@ window.survey = new Survey.Model({ questions: [
               {value: "diamond", text: "../resources/diamond.png"},
               {value: "rose", text: "../resources/rose.png"},
               {value: "totem", text: "../resources/totem.png"},
-              {value: "surfing", text: "../resources/surf.png"},
+              {value: "surfing", text: "../resources/surf-board.png"},
            ]
         }
 ]});
