@@ -74,7 +74,7 @@ window.survey = new Survey.Model({ questions: [
 ]});
 survey.onComplete.add(function(result) {
 
-    if(result.data["budget"]=="a lot" && result.data["stay"]=="luxury"){
+    if(result.data["budget"]=="a lot"){
       if(result.data["stay"]=="luxury"){
         if(result.data["luggage"]=="purse" || result.data["luggage"]=="luggage"){
           if(result.data["food"]=="sushi"){
@@ -90,15 +90,10 @@ survey.onComplete.add(function(result) {
             window.loaction.replace('/maldives');
           }
         }
-      }
-    } else{
-      window.loaction.replace('/canada');
-    }
-    } else if(result.data["budget"]=="a lot" && result.data["stay"]!="luxury"){
-        window.location.replace('/maldives');
+        }
       } else{
-        window.location.replace('/maldives');
-      }
+    window.location.replace('/canada');
+  }
     } else if(result.data["budget"]=="normal"){
       if(result.data["stay"]=="airbnb" || result.data["stay"]=="resort"){
         if(result.data["food"]!="sushi" && result.data["food"]!="salad"){
