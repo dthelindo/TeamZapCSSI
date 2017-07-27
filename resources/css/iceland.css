@@ -32,19 +32,8 @@ h1 {
   position: relative;
 }
 
-.bgimg-1  {
-  position: relative;
-  opacity: 0.80;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-}
-
 .bgimg-2 {
   background-color: : white;
-  min-height: 100%;
   z-index: 0;
 }
 
