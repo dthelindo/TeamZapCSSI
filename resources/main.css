@@ -94,6 +94,22 @@ h1 a:hover{
   height: 80px;
   width: 80px;
   left: 30px;
+  top: 200px;
+  position: absolute;
+}
+
+#mail {
+  height: 100px;
+  width: 100px;
+  left: 30px;
   top: 110px;
+  position: absolute;
+}
+
+#fb {
+  height: 20px;
+  width: 20px;
+  left: 40px;
+  top: 290px;
   position: absolute;
 }
