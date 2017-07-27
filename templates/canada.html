@@ -21,7 +21,7 @@
   <div class="bgimg-2">
     <iframe
     width="300%"
-    height="450"
+    height="500"
     frameborder="0" style="border:0"
     src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDfmgpRu0R7vb8OlC5ycX448N6jv1dkC2c&q=stanley+park&zoom=11" allowfullscreen>
     </iframe>
@@ -32,7 +32,7 @@
           <form method="get">
             Search:
           <input type="text" name="interest" placeholder="Hotels"> in
-          <input type="text" name="city" placeholder="Mexico City">
+          <input type="text" name="city" placeholder="Canada">
 
           <input type="submit" value="Search in Google Places">
         </form>
@@ -42,8 +42,9 @@
 
     <div class="address">
           {% for place in places_list %}
-            <p> {{ place[0] }}  :
+            <p> <a href="http://google.com/search?q={{place[0]}}" target="_blank" style="color: black">{{ place[0] }}</a>  :
               <br>{{ place[1] }}</p>
+              <img src="{{photo_url}}">
               <br> <br>
 
           {% endfor %}
