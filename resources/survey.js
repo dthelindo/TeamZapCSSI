@@ -74,7 +74,8 @@ window.survey = new Survey.Model({ questions: [
 ]});
 survey.onComplete.add(function(result) {
 
-    if(result.data["budget"]=="a lot"){
+    if(result.data["budget"]=="a lot" && result.data["stay"]=="luxury"){
+      if(result.data["stay"]=="luxury"){
         if(result.data["luggage"]=="purse" || result.data["luggage"]=="luggage"){
           if(result.data["food"]=="sushi"){
           window.location.replace('/maldives');
@@ -86,10 +87,14 @@ survey.onComplete.add(function(result) {
           } else if(result.data["essential"]=="drink" || result.data["essential"]=="camera"){
             window.location.replace('/santorini');
           } else{
-            window.loaction.replace('/canada');
+            window.loaction.replace('/maldives');
           }
         }
-      } else if(result.data["budget"]=="a lot" && result.data["stay"]!="luxury"){
+      }
+    } else{
+      window.loaction.replace('/canada');
+    }
+    } else if(result.data["budget"]=="a lot" && result.data["stay"]!="luxury"){
         window.location.replace('/maldives');
       } else{
         window.location.replace('/maldives');
