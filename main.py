@@ -395,9 +395,11 @@ class CanadaHandler(webapp2.RequestHandler):
 
         places_list = []
         placescount = 0
-
+        photo_url = None
+        
         for item in content_dict["results"]:
             place_list = [ item["name"], item["formatted_address"]]
+            photo_url = [item["photos"][0]["photo_reference"]]
 
             placescount += 1
             if placescount < 6:
@@ -405,6 +407,7 @@ class CanadaHandler(webapp2.RequestHandler):
 
         my_vars = {
                     "places_list": places_list,
+                    "photo_url": photo_url,
                   }
         template = env.get_template("canada.html")
         self.response.out.write(template.render(my_vars))
@@ -424,17 +427,6 @@ class ContactHandler(webapp2.RequestHandler):
         template = env.get_template("contact.html")
         self.response.out.write(template.render())
 
-'''
-class TripHandler(webapp2.RequestHandler):
-    def get(self):
-        template = env.get_template("trips.html")
-        self.response.out.write(template.render())
-
-class AttractionHandler(webapp2.RequestHandler):
-    def post(self):
-        template = env.get_template("attractions.html")
-        self.response.out.write(template.render())
-'''
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
