@@ -33,6 +33,7 @@ h1 {
   position: relative;
 }
 
+<<<<<<< HEAD
 
 .match{
   font-family: 'Dancing Script', cursive;
@@ -45,6 +46,17 @@ h1 {
   margin-bottom: -9%;
 }
 
+=======
+.bgimg-1  {
+  position: relative;
+  opacity: 0.80;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+>>>>>>> 17de4532a3fe1b17683d9fd083e53071c95de902
 
 .bgimg-2 {
   background-color: : white;
@@ -93,6 +105,7 @@ h2 {
   padding-left: 2%;
 }
 
+<<<<<<< HEAD
 
 
 #title {
@@ -125,3 +138,43 @@ h2 {
   margin-top: 50px;
   text-align: left;
   padding-left: 39%;}
+=======
+h6 {
+  font-family: 'Lato', sans-serif;
+  font-size: 40px;
+  font-weight: 300;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  padding-left: 2%;
+  }
+
+::-webkit-input-placeholder {
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+  }
+
+  .bgimg-2 {
+    background-color: : white;
+    max-height: 20px;
+    z-index: 0;
+  }
+
+  .bgimg-3 {
+    background-color: : white;
+    min-height: 99%;
+    z-index: 0;
+  }
+
+  .point_of_interest {
+    width: "100%";
+    height: "450";
+  }
+
+  p{
+    font-family: 'Lato', sans-serif;
+  }
+
+  a{
+    color: #FFBEA3;
+  }
+>>>>>>> 17de4532a3fe1b17683d9fd083e53071c95de902
