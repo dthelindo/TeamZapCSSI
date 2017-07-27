@@ -3,6 +3,8 @@
 <head>
   <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700" rel="stylesheet">
   <script src="jquery-3.2.1.min.js"></script>
+  <script src="../resources/dubai.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
   <link rel="stylesheet" type="text/css" href="../resources/css/dubai.css">
   <title> You've Been Matched! </title>
 </head>
@@ -12,10 +14,9 @@
 <div class="bgimg-1">
   <h2><a href="/" style="text-decoration: none; color: white; margin-left: 5px">Escape</a></h2>
   <br></br>
-      <h3 id="match"> You've been matched! </h3>
-      <h1> Dubai </h1>
+      <h3 class="match tada animated"> You've been matched! </h3>
+      <h1 class="fadeInDown animated"> Dubai </h1>
 </div>
-
 <div class="flexDiv">
   <div class="bgimg-2">
     <iframe
@@ -39,7 +40,7 @@
 
     <hr/>
 
-    <div class="address">
+    <div class="address ">
           {% for place in places_list %}
             <p> <a href="http://google.com/search?q={{place[0]}}" target="_blank" style="color: black">{{ place[0] }}</a>  :
               <br>{{ place[1] }}</p>
@@ -49,6 +50,5 @@
       </div>
     </div>
 </div>
-</body>
 
 </html>
