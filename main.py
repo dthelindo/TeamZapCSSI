@@ -95,6 +95,8 @@ class DubaiHandler(webapp2.RequestHandler):
 
         params = {
                     "query" : interest+"in"+city,
+                    "height" : 853,
+                    "width" : 1280,
                     "key": "AIzaSyBm7yeTJxedophanMs4cfii4wljJRsE_gQ",
                   }
 
@@ -107,9 +109,11 @@ class DubaiHandler(webapp2.RequestHandler):
 
         places_list = []
         placescount = 0
+        photo = ''
 
         for item in content_dict["results"]:
-            place_list = [ item["name"], item["formatted_address"]]
+            photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&key=AIzaSyDfmgpRu0R7vb8OlC5ycX448N6jv1dkC2c&photoreference=" + item["photos"][0]["photo_reference"]
+            place_list = [ item["name"], item["formatted_address"], photo_url]
 
             placescount += 1
             if placescount < 6:
@@ -135,6 +139,8 @@ class HongKongHandler(webapp2.RequestHandler):
 
         params = {
                     "query" : interest+"in"+city,
+                    "height" : 853,
+                    "width" : 1280,
                     "key": "AIzaSyBm7yeTJxedophanMs4cfii4wljJRsE_gQ",
                   }
 
@@ -147,9 +153,11 @@ class HongKongHandler(webapp2.RequestHandler):
 
         places_list = []
         placescount = 0
+        photo = ''
 
         for item in content_dict["results"]:
-            place_list = [ item["name"], item["formatted_address"]]
+            photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&key=AIzaSyDfmgpRu0R7vb8OlC5ycX448N6jv1dkC2c&photoreference=" + item["photos"][0]["photo_reference"]
+            place_list = [ item["name"], item["formatted_address"], photo_url]
 
             placescount += 1
             if placescount < 6:
@@ -175,6 +183,8 @@ class IcelandHandler(webapp2.RequestHandler):
 
         params = {
                     "query" : interest+"in"+city,
+                    "height" : 853,
+                    "width" : 1280,
                     "key": "AIzaSyBm7yeTJxedophanMs4cfii4wljJRsE_gQ",
                   }
 
@@ -187,9 +197,11 @@ class IcelandHandler(webapp2.RequestHandler):
 
         places_list = []
         placescount = 0
+        photo = ''
 
         for item in content_dict["results"]:
-            place_list = [ item["name"], item["formatted_address"]]
+            photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&key=AIzaSyDfmgpRu0R7vb8OlC5ycX448N6jv1dkC2c&photoreference=" + item["photos"][0]["photo_reference"]
+            place_list = [ item["name"], item["formatted_address"], photo_url]
 
             placescount += 1
             if placescount < 6:
@@ -215,6 +227,8 @@ class MaldivesHandler(webapp2.RequestHandler):
 
         params = {
                     "query" : interest+"in"+city,
+                    "height" : 853,
+                    "width" : 1280,
                     "key": "AIzaSyBm7yeTJxedophanMs4cfii4wljJRsE_gQ",
                   }
 
@@ -227,9 +241,11 @@ class MaldivesHandler(webapp2.RequestHandler):
 
         places_list = []
         placescount = 0
+        photo = ''
 
         for item in content_dict["results"]:
-            place_list = [ item["name"], item["formatted_address"]]
+            photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&key=AIzaSyDfmgpRu0R7vb8OlC5ycX448N6jv1dkC2c&photoreference=" + item["photos"][0]["photo_reference"]
+            place_list = [ item["name"], item["formatted_address"], photo_url]
 
             placescount += 1
             if placescount < 6:
@@ -256,13 +272,14 @@ class MexicoCityHandler(webapp2.RequestHandler):
 
         params = {
                     "query" : interest+"in"+city,
+                    "height" : 853,
+                    "width" : 1280,
                     "key": "AIzaSyBm7yeTJxedophanMs4cfii4wljJRsE_gQ",
                 }
 
         query_text = urllib.urlencode(params)
         api_url = "https://maps.googleapis.com/maps/api/place/textsearch/json?" + query_text
 
-        #Line 21 is used as to log the whole url query
 
         address_response = urllib2.urlopen(api_url)
         content = address_response.read()
@@ -271,10 +288,12 @@ class MexicoCityHandler(webapp2.RequestHandler):
 
         places_list = []
         placescount = 0
+        photo = ''
 
 
         for item in content_dict["results"]:
-            place_list = [ item["name"], item["formatted_address"]]
+            photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&key=AIzaSyDfmgpRu0R7vb8OlC5ycX448N6jv1dkC2c&photoreference=" + item["photos"][0]["photo_reference"]
+            place_list = [ item["name"], item["formatted_address"], photo_url]
 
             placescount += 1
             if placescount < 6:
@@ -303,6 +322,8 @@ class NewZealandHandler(webapp2.RequestHandler):
 
         params = {
                     "query" : interest+"in"+city,
+                    "height" : 853,
+                    "width" : 1280,
                     "key": "AIzaSyBm7yeTJxedophanMs4cfii4wljJRsE_gQ",
                   }
 
@@ -315,9 +336,11 @@ class NewZealandHandler(webapp2.RequestHandler):
 
         places_list = []
         placescount = 0
+        photo = ''
 
         for item in content_dict["results"]:
-            place_list = [ item["name"], item["formatted_address"]]
+            photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&key=AIzaSyDfmgpRu0R7vb8OlC5ycX448N6jv1dkC2c&photoreference=" + item["photos"][0]["photo_reference"]
+            place_list = [ item["name"], item["formatted_address"], photo_url]
 
             placescount += 1
             if placescount < 6:
@@ -343,6 +366,8 @@ class SantoriniHandler(webapp2.RequestHandler):
 
         params = {
                     "query" : interest+"in"+city,
+                    "height" : 853,
+                    "width" : 1280,
                     "key": "AIzaSyBm7yeTJxedophanMs4cfii4wljJRsE_gQ",
                   }
 
@@ -398,7 +423,6 @@ class CanadaHandler(webapp2.RequestHandler):
 
         places_list = []
         placescount = 0
-        #photos_list = []
         photo = ''
 
         for item in content_dict["results"]:
@@ -410,14 +434,8 @@ class CanadaHandler(webapp2.RequestHandler):
             if placescount < 6:
                 places_list.append(place_list)
 
-
-            #photo = photo_url
-
-
         my_vars = {
                     "places_list": places_list,
-                    #"photo_url": photo_url,
-                    #"photos_list": photos_list,
                   }
         template = env.get_template("canada.html")
         self.response.out.write(template.render(my_vars))

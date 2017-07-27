@@ -44,6 +44,7 @@
           {% for place in places_list %}
             <p> <a href="http://google.com/search?q={{place[0]}}" target="_blank" style="color: black">{{ place[0] }}</a>  :
               <br>{{ place[1] }}</p>
+              <img src="{{place[2]}}">
               <br> <br>
 
           {% endfor %}
