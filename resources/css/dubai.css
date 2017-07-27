@@ -31,6 +31,17 @@ h1 {
   position: relative;
 }
 
+.match{
+  font-family: 'Dancing Script', cursive;
+  font-size: 50px;
+  color: #EDE3E6;
+  text-shadow: 4px 4px 4px #73636B;
+  text-align:center;
+  position: relative;
+  transform: translateY(100px);
+  margin-bottom: -4%;
+}
+
 
 .bgimg-2 {
   background-color: : white;
@@ -80,17 +91,6 @@ h2 {
   vertical-align: top;
   position: relative;
   }
-
-.match{
-  font-family: 'Dancing Script', cursive;
-  font-size: 50px;
-  color: #EDE3E6;
-  text-shadow: 4px 4px 4px #73636B;
-  text-align:center;
-  position: relative;
-  transform: translateY(100px);
-  margin-bottom: -4%;
-}
 
 .flexDiv{
   display: flex;
