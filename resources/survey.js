@@ -76,6 +76,7 @@ window.survey = new Survey.Model({ questions: [
 survey.onComplete.add(function(result) {
 
     if(result.data["budget"]=="a lot" && result.data["stay"]=="luxury"){
+      if(result.data["stay"]=="luxury"){
         if(result.data["luggage"]=="purse" || result.data["luggage"]=="luggage"){
           if(result.data["food"]=="sushi"){
           window.location.replace('/maldives');
@@ -90,7 +91,13 @@ survey.onComplete.add(function(result) {
             window.loaction.replace('/maldives');
           }
         }
-      } else if(result.data["budget"]=="a lot" && result.data["stay"]!="luxury"){
+      }
+    } else{
+      window.loaction.replace('/canada');
+    }
+    } else if(result.data["budget"]=="a lot" && result.data["stay"]!="luxury"){
+        window.location.replace('/maldives');
+      } else{
         window.location.replace('/maldives');
       }
     } else if(result.data["budget"]=="normal"){
@@ -104,6 +111,18 @@ survey.onComplete.add(function(result) {
         }
       } else if(result.data["stay"]=="luxury"){
         window.location.replace('/dubai');
+      } else if(result.data["stay"]=="tent"){
+        window.location.replace('/dubai');
+      } else if(result.data["luggage"] == "backpack"){
+          if(result.data["food"] != "sushi"){
+            if(result.data["stay"] == "tent"){
+              if(result.data["essential"] == "phone"){
+                window.location.replace('/newzealand');
+              }else if(result.data["essential"] == "camera"){
+                window.location.replace('/canada');
+               }
+            }
+          }
       } else{
         window.location.replace('/hongkong');
       }
@@ -114,7 +133,7 @@ survey.onComplete.add(function(result) {
         window.location.replace('/iceland');
       }else if(result.data["message"]=="wilderness"){
          window.location.replace('/iceland');
-       }else if(result.data["stay"]=="tent"){
+      }else if(result.data["stay"]=="tent"){
            window.location.replace('/mexicocity');
       }else{
         window.location.replace('/mexicocity');
@@ -123,21 +142,6 @@ survey.onComplete.add(function(result) {
  });
 
   /*
-
-
-      && result.data["bucketList"]!="shopping"
-      && result.data["essential"]=="camera" || result.data["essential"]=="drink" || result.data["essential"]=="phone"
-      && result.data["message"]=="restaurant" || result.data["message"]=="tanline"
-      && result.data["food"]=="sushi" || result.data["food"]=="salad"
-      && result.data["souvenir"]=="diamond" || result.data["souvenir"]=="rose"){
-    window.location.replace('/hongkong');
-
-
-
-
-      && result.data["essential"]!="hiking shoes"
-      && result.data["message"]!="wilderness"){
-    window.location.replace('/dubai');*/
 
   /*}else if(result.data["budget"] == "normal"){
       if(result.data["luggage"] == "backpack"){
