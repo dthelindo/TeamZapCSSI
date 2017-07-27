@@ -86,10 +86,12 @@ survey.onComplete.add(function(result) {
           } else if(result.data["essential"]=="drink" || result.data["essential"]=="camera"){
             window.location.replace('/santorini');
           } else{
-            window.loaction.replace('/maldives');
+            window.loaction.replace('/canada');
           }
         }
       } else if(result.data["budget"]=="a lot" && result.data["stay"]!="luxury"){
+        window.location.replace('/maldives');
+      } else{
         window.location.replace('/maldives');
       }
     } else if(result.data["budget"]=="normal"){
@@ -134,21 +136,6 @@ survey.onComplete.add(function(result) {
  });
 
   /*
-
-
-      && result.data["bucketList"]!="shopping"
-      && result.data["essential"]=="camera" || result.data["essential"]=="drink" || result.data["essential"]=="phone"
-      && result.data["message"]=="restaurant" || result.data["message"]=="tanline"
-      && result.data["food"]=="sushi" || result.data["food"]=="salad"
-      && result.data["souvenir"]=="diamond" || result.data["souvenir"]=="rose"){
-    window.location.replace('/hongkong');
-
-
-
-
-      && result.data["essential"]!="hiking shoes"
-      && result.data["message"]!="wilderness"){
-    window.location.replace('/dubai');*/
 
   /*}else if(result.data["budget"] == "normal"){
       if(result.data["luggage"] == "backpack"){
