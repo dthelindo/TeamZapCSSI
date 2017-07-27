@@ -171,3 +171,30 @@ small {
 .website a {
   color: black;
 }
+
+.flexDiv{
+  width: 30%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+#twitter {
+  height: 80px;
+  width: 80px;
+
+}
+
+#mail {
+  height: 100px;
+  width: 100px;
+
+
+}
+
+#fb {
+  height: 20px;
+  width: 20px;
+
+
+}
