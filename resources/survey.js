@@ -74,7 +74,6 @@ window.survey = new Survey.Model({ questions: [
 ]});
 survey.onComplete.add(function(result) {
 
-
     if(result.data["budget"]=="a lot" && result.data["stay"]=="luxury"){
         if(result.data["luggage"]=="purse" || result.data["luggage"]=="luggage"){
           if(result.data["food"]=="sushi"){
@@ -90,48 +89,44 @@ survey.onComplete.add(function(result) {
             window.loaction.replace('/maldives');
           }
         }
-    }
+      }
+    } else if(result.data["budget"]=="normal"){
+      if(result.data["stay"]=="airbnb" || result.data["stay"]=="resort"){
+        if(result.data["food"]!="sushi" && result.data["food"]!="salad"){
+          window.location.replace('/dubai');
+        } else if(result.data["food"]=="family"){
+          window.location.replace('/hongkong');
+        } else{
+          window.location.replace('/dubai');
+        }
+      } else if(result.data["stay"]=="luxury"){
+        window.location.replace('/dubai');
+      } else{
+        window.location.replace('/');
+      }
     }else{
       window.location.replace('/');
-   }
-  }
+    }
+ });
+
+  /*
 
 
-
-
-
-
-
-
-
-  }else if(result.data["luggage"]=="briefcase" || result.data["luggage"]=="purse" ||result.data["luggage"]=="luggage"
-      && result.data["stay"]=="airbnb" || result.data["stay"]=="resort" || result.data["stay"]=="luxury"
-      && result.data["budget"]!="little"
       && result.data["bucketList"]!="shopping"
       && result.data["essential"]=="camera" || result.data["essential"]=="drink" || result.data["essential"]=="phone"
-      && result.data["message"]=="restaurant" || result.data["message"]=="tanline" || result.data["message"]=="tanline"
+      && result.data["message"]=="restaurant" || result.data["message"]=="tanline"
       && result.data["food"]=="sushi" || result.data["food"]=="salad"
       && result.data["souvenir"]=="diamond" || result.data["souvenir"]=="rose"){
     window.location.replace('/hongkong');
 
-  }else if(result.data["luggage"]=="briefcase" || result.data["luggage"]=="purse" ||result.data["luggage"]=="luggage"
-      && result.data["stay"]=="airbnb" || result.data["stay"]=="resort" || result.data["stay"]=="luxury"
-      && result.data["budget"]!="little"
+
+
+
       && result.data["essential"]!="hiking shoes"
       && result.data["message"]!="wilderness"){
     window.location.replace('/dubai');*/
 
-
-
-
-
-
-
-
-
-
-
-  if(result.data["luggage"] == "backpack"
+  /*}else if(result.data["luggage"] == "backpack"
   && result.data["food"] != "sushi"
   && result.data["souvenir"] == "rose"
   && result.data["budget"] == "normal"
@@ -163,8 +158,7 @@ survey.onComplete.add(function(result) {
     window.location.replace('/')
   }
 
-});
-
+});*/
 
 var widget = {
     name: "imagepicker",
