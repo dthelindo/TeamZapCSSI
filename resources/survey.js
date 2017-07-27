@@ -103,6 +103,8 @@ survey.onComplete.add(function(result) {
         }
       } else if(result.data["stay"]=="luxury"){
         window.location.replace('/dubai');
+      } else if(result.data["stay"]=="tent"){
+        window.location.replace('/dubai');
       } else{
         window.location.replace('/hongkong');
       }
@@ -113,7 +115,7 @@ survey.onComplete.add(function(result) {
         window.location.replace('/iceland');
       }else if(result.data["message"]=="wilderness"){
          window.location.replace('/iceland');
-       }else if(result.data["stay"]=="tent"){
+      }else if(result.data["stay"]=="tent"){
            window.location.replace('/mexicocity');
       }else{
         window.location.replace('/mexicocity');
