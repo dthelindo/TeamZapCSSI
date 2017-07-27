@@ -88,7 +88,7 @@ class DubaiHandler(webapp2.RequestHandler):
         city = self.request.get("city")
 
         if not interest:
-            interest = "Attractions"
+            interest = "Hotels"
 
         if not city:
             city = "Dubai"
@@ -132,7 +132,7 @@ class HongKongHandler(webapp2.RequestHandler):
         city = self.request.get("city")
 
         if not interest:
-            interest = "Attractions"
+            interest = "Hotels"
 
         if not city:
             city = "Hong Kong"
@@ -176,7 +176,7 @@ class IcelandHandler(webapp2.RequestHandler):
         city = self.request.get("city")
 
         if not interest:
-            interest = "Attractions"
+            interest = "Hotels"
 
         if not city:
             city = "iceland"
@@ -220,7 +220,7 @@ class MaldivesHandler(webapp2.RequestHandler):
         city = self.request.get("city")
 
         if not interest:
-            interest = "Attractions"
+            interest = "Hotels"
 
         if not city:
             city = "maldives"
@@ -263,7 +263,7 @@ class MexicoCityHandler(webapp2.RequestHandler):
         city = self.request.get("city")
 
         if not interest:
-            interest = "Attractions"
+            interest = "Hotels"
 
         if not city:
             city = "mexico city"
@@ -315,7 +315,7 @@ class NewZealandHandler(webapp2.RequestHandler):
         city = self.request.get("city")
 
         if not interest:
-            interest = "Attractions"
+            interest = "Hotels"
 
         if not city:
             city = "New Zealand"
@@ -359,7 +359,7 @@ class SantoriniHandler(webapp2.RequestHandler):
         city = self.request.get("city")
 
         if not interest:
-            interest = "Attractions"
+            interest = "Hotels"
 
         if not city:
             city = "Santorini"
@@ -401,7 +401,7 @@ class CanadaHandler(webapp2.RequestHandler):
         city = self.request.get("city")
 
         if not interest:
-            interest = "Attractions"
+            interest = "Hotels"
 
         if not city:
             city = "Vancouver"
