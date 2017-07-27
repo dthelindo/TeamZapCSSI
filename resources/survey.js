@@ -74,7 +74,7 @@ window.survey = new Survey.Model({ questions: [
 ]});
 survey.onComplete.add(function(result) {
 
-    if(result.data["budget"]=="a lot" && result.data["stay"]=="luxury"){
+    if(result.data["budget"]=="a lot"){
         if(result.data["luggage"]=="purse" || result.data["luggage"]=="luggage"){
           if(result.data["food"]=="sushi"){
           window.location.replace('/maldives');
