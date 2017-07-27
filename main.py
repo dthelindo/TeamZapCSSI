@@ -112,7 +112,7 @@ class DubaiHandler(webapp2.RequestHandler):
             place_list = [ item["name"], item["formatted_address"]]
 
             placescount += 1
-            if placescount < 11:
+            if placescount < 6:
                 places_list.append(place_list)
 
         my_vars = {
@@ -152,7 +152,7 @@ class HongKongHandler(webapp2.RequestHandler):
             place_list = [ item["name"], item["formatted_address"]]
 
             placescount += 1
-            if placescount < 11:
+            if placescount < 6:
                 places_list.append(place_list)
 
         my_vars = {
@@ -171,7 +171,7 @@ class IcelandHandler(webapp2.RequestHandler):
             interest = "Attractions"
 
         if not city:
-            city = "icealand"
+            city = "iceland"
 
         params = {
                     "query" : interest+"in"+city,
@@ -192,7 +192,7 @@ class IcelandHandler(webapp2.RequestHandler):
             place_list = [ item["name"], item["formatted_address"]]
 
             placescount += 1
-            if placescount < 11:
+            if placescount < 6:
                 places_list.append(place_list)
 
         my_vars = {
@@ -232,7 +232,7 @@ class MaldivesHandler(webapp2.RequestHandler):
             place_list = [ item["name"], item["formatted_address"]]
 
             placescount += 1
-            if placescount < 11:
+            if placescount < 6:
                 places_list.append(place_list)
 
         my_vars = {
@@ -277,7 +277,7 @@ class MexicoCityHandler(webapp2.RequestHandler):
             place_list = [ item["name"], item["formatted_address"]]
 
             placescount += 1
-            if placescount < 11:
+            if placescount < 6:
                 places_list.append(place_list)
 
         my_vars = {
@@ -320,7 +320,7 @@ class NewZealandHandler(webapp2.RequestHandler):
             place_list = [ item["name"], item["formatted_address"]]
 
             placescount += 1
-            if placescount < 11:
+            if placescount < 6:
                 places_list.append(place_list)
 
         my_vars = {
@@ -360,7 +360,7 @@ class SantoriniHandler(webapp2.RequestHandler):
             place_list = [ item["name"], item["formatted_address"]]
 
             placescount += 1
-            if placescount < 11:
+            if placescount < 6:
                 places_list.append(place_list)
 
         my_vars = {
@@ -400,7 +400,7 @@ class CanadaHandler(webapp2.RequestHandler):
             place_list = [ item["name"], item["formatted_address"]]
 
             placescount += 1
-            if placescount < 11:
+            if placescount < 6:
                 places_list.append(place_list)
 
         my_vars = {

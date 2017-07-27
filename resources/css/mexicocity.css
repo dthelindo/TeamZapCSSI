@@ -50,3 +50,8 @@ h2 {
   position: relative;
   transform: translateY(100px);
 }
+
+.flexDiv{
+  display: flex;
+  justify-content: space-between;
+}
