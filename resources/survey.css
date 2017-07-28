@@ -80,3 +80,6 @@ h2 {
     text-align: right;
     background-color: #fff;
 }
+.thumbnail {
+  cursor: pointer;
+}
