@@ -34,6 +34,10 @@ h1 {
 }
 
 <<<<<<< HEAD
+.bgimg-2 {
+  background-color: : white;
+=======
+<<<<<<< HEAD
 
 .match{
   font-family: 'Dancing Script', cursive;
@@ -61,6 +65,7 @@ h1 {
 .bgimg-2 {
   background-color: : white;
   max-height: 150px;
+>>>>>>> 8a23417234d4878a39a3097fca10db837f2497fe
   z-index: 0;
 }
 

@@ -11,6 +11,7 @@ import urllib2
 import webapp2
 
 env = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.dirname(__file__) + '/templates'))
+api_key = "AIzaSyD-OUOrEWHU3c76rjNNkkw2yXDPwqmxj14"
 
 '''
 class Trip(ndb.Model):
@@ -97,7 +98,7 @@ class DubaiHandler(webapp2.RequestHandler):
                     "query" : interest+"in"+city,
                     "height" : 853,
                     "width" : 1280,
-                    "key": "AIzaSyBm7yeTJxedophanMs4cfii4wljJRsE_gQ",
+                    "key": api_key,
                   }
 
         query_text = urllib.urlencode(params)
@@ -112,7 +113,7 @@ class DubaiHandler(webapp2.RequestHandler):
         photo = ''
 
         for item in content_dict["results"]:
-            photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&key=AIzaSyDfmgpRu0R7vb8OlC5ycX448N6jv1dkC2c&photoreference=" + item["photos"][0]["photo_reference"]
+            photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&key="+api_key+"&photoreference=" + item["photos"][0]["photo_reference"]
             place_list = [ item["name"], item["formatted_address"], photo_url]
 
             placescount += 1
@@ -141,7 +142,7 @@ class HongKongHandler(webapp2.RequestHandler):
                     "query" : interest+"in"+city,
                     "height" : 853,
                     "width" : 1280,
-                    "key": "AIzaSyBm7yeTJxedophanMs4cfii4wljJRsE_gQ",
+                    "key": api_key,
                   }
 
         query_text = urllib.urlencode(params)
@@ -156,7 +157,7 @@ class HongKongHandler(webapp2.RequestHandler):
         photo = ''
 
         for item in content_dict["results"]:
-            photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&key=AIzaSyDfmgpRu0R7vb8OlC5ycX448N6jv1dkC2c&photoreference=" + item["photos"][0]["photo_reference"]
+            photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&key="+api_key+"&photoreference=" + item["photos"][0]["photo_reference"]
             place_list = [ item["name"], item["formatted_address"], photo_url]
 
             placescount += 1
@@ -185,7 +186,7 @@ class IcelandHandler(webapp2.RequestHandler):
                     "query" : interest+"in"+city,
                     "height" : 853,
                     "width" : 1280,
-                    "key": "AIzaSyBm7yeTJxedophanMs4cfii4wljJRsE_gQ",
+                    "key": api_key,
                   }
 
         query_text = urllib.urlencode(params)
@@ -200,7 +201,7 @@ class IcelandHandler(webapp2.RequestHandler):
         photo = ''
 
         for item in content_dict["results"]:
-            photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&key=AIzaSyDfmgpRu0R7vb8OlC5ycX448N6jv1dkC2c&photoreference=" + item["photos"][0]["photo_reference"]
+            photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&key="+api_key+"&photoreference=" + item["photos"][0]["photo_reference"]
             place_list = [ item["name"], item["formatted_address"], photo_url]
 
             placescount += 1
@@ -229,7 +230,7 @@ class MaldivesHandler(webapp2.RequestHandler):
                     "query" : interest+"in"+city,
                     "height" : 853,
                     "width" : 1280,
-                    "key": "AIzaSyBm7yeTJxedophanMs4cfii4wljJRsE_gQ",
+                    "key": api_key,
                   }
 
         query_text = urllib.urlencode(params)
@@ -245,7 +246,7 @@ class MaldivesHandler(webapp2.RequestHandler):
         photo = ''
 
         for item in content_dict["results"]:
-            photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&key=AIzaSyDfmgpRu0R7vb8OlC5ycX448N6jv1dkC2c&photoreference=" + item["photos"][0]["photo_reference"]
+            photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&key="+api_key+"&photoreference=" + item["photos"][0]["photo_reference"]
             place_list = [ item["name"], item["formatted_address"], photo_url]
 
 
@@ -275,7 +276,7 @@ class MexicoCityHandler(webapp2.RequestHandler):
                     "query" : interest+"in"+city,
                     "height" : 853,
                     "width" : 1280,
-                    "key": "AIzaSyBm7yeTJxedophanMs4cfii4wljJRsE_gQ",
+                    "key": api_key,
                   }
 
         query_text = urllib.urlencode(params)
@@ -291,7 +292,7 @@ class MexicoCityHandler(webapp2.RequestHandler):
         photo = ''
 
         for item in content_dict["results"]:
-            photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&key=AIzaSyDfmgpRu0R7vb8OlC5ycX448N6jv1dkC2c&photoreference=" + item["photos"][0]["photo_reference"]
+            photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&key="+api_key+"&photoreference=" + item["photos"][0]["photo_reference"]
             place_list = [ item["name"], item["formatted_address"], photo_url]
 
 
@@ -321,7 +322,7 @@ class NewZealandHandler(webapp2.RequestHandler):
                     "query" : interest+"in"+city,
                     "height" : 853,
                     "width" : 1280,
-                    "key": "AIzaSyBm7yeTJxedophanMs4cfii4wljJRsE_gQ",
+                    "key": api_key,
                   }
 
         query_text = urllib.urlencode(params)
@@ -337,7 +338,7 @@ class NewZealandHandler(webapp2.RequestHandler):
         photo = ''
 
         for item in content_dict["results"]:
-            photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&key=AIzaSyDfmgpRu0R7vb8OlC5ycX448N6jv1dkC2c&photoreference=" + item["photos"][0]["photo_reference"]
+            photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&key="+api_key+"&photoreference=" + item["photos"][0]["photo_reference"]
             place_list = [ item["name"], item["formatted_address"], photo_url]
 
 
@@ -367,7 +368,7 @@ class SantoriniHandler(webapp2.RequestHandler):
                     "query" : interest+"in"+city,
                     "height" : 853,
                     "width" : 1280,
-                    "key": "AIzaSyBm7yeTJxedophanMs4cfii4wljJRsE_gQ",
+                    "key": api_key,
                   }
 
         query_text = urllib.urlencode(params)
@@ -383,7 +384,7 @@ class SantoriniHandler(webapp2.RequestHandler):
         photo = ''
 
         for item in content_dict["results"]:
-            photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&key=AIzaSyDfmgpRu0R7vb8OlC5ycX448N6jv1dkC2c&photoreference=" + item["photos"][0]["photo_reference"]
+            photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&key="+api_key+"&photoreference=" + item["photos"][0]["photo_reference"]
             place_list = [ item["name"], item["formatted_address"], photo_url]
 
 
@@ -413,7 +414,7 @@ class CanadaHandler(webapp2.RequestHandler):
                     "query" : interest+"in"+city,
                     "height" : 853,
                     "width" : 1280,
-                    "key": "AIzaSyBm7yeTJxedophanMs4cfii4wljJRsE_gQ",
+                    "key": api_key,
                   }
 
         query_text = urllib.urlencode(params)
@@ -429,7 +430,7 @@ class CanadaHandler(webapp2.RequestHandler):
         photo = ''
 
         for item in content_dict["results"]:
-            photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&key=AIzaSyDfmgpRu0R7vb8OlC5ycX448N6jv1dkC2c&photoreference=" + item["photos"][0]["photo_reference"]
+            photo_url = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&key="+api_key+"&photoreference=" + item["photos"][0]["photo_reference"]
             place_list = [ item["name"], item["formatted_address"], photo_url]
 
 
