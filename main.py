@@ -11,7 +11,7 @@ import urllib2
 import webapp2
 
 env = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.dirname(__file__) + '/templates'))
-api_key = "AIzaSyD-OUOrEWHU3c76rjNNkkw2yXDPwqmxj14"
+api_key = "AIzaSyBwuATRhYj2K8ZYVwn9UYTOtghYFYBU5Fo"
 
 '''
 class Trip(ndb.Model):
