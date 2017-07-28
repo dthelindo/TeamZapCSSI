@@ -12,7 +12,7 @@ import webapp2
 
 env = jinja2.Environment(loader=jinja2.FileSystemLoader(os.path.dirname(__file__) + '/templates'))
 api_key = "AIzaSyD6eVuPTwr53NoO6fp1WhFor5a4m6SuimY"
-
+#AIzaSyD2KWpkHTHkhgL0I0NoOFZCLArW1uFrCn4
 '''
 class Trip(ndb.Model):
     country = ndb.StringProperty()
