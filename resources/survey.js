@@ -23,7 +23,7 @@ window.survey = new Survey.Model({ questions: [
     }, { type: "dropdown", name: "stay", renderAs: "imagepicker", title: "ZzzzZZ... Time to rest! Select a place to stay: ",
         choices: [
            {value: "airbnb", text: "../resources/airbnb.png"},
-           {value: "resort", text: "../resources/hilton.png"},
+           {value: "hilton", text: "../resources/hilton.png"},
            {value: "tent", text: "../resources/tent.png"},
            {value: "luxury", text: "../resources/luxuryresort.png"}
         ]
@@ -95,7 +95,7 @@ survey.onComplete.add(function(result) {
     window.location.replace('/canada');
   }
     } else if(result.data["budget"]=="normal"){
-      if(result.data["stay"]=="airbnb" || result.data["stay"]=="resort"){
+      if(result.data["stay"]=="airbnb" || result.data["stay"]=="hilton"){
         if(result.data["food"]!="sushi" && result.data["food"]!="salad"){
           window.location.replace('/dubai');
         } else if(result.data["partner"]=="family"){
