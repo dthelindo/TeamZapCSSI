@@ -27,6 +27,12 @@ h1 {
 
 }
 
+.bgimg-1 {
+  background-image: url("../maldives.gif");
+  min-height: 100%;
+  position: relative;
+}
+
 .bgimg-2 {
   background-color: : white;
   max-height: 150px;
