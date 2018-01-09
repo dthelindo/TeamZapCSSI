@@ -2,7 +2,6 @@ Escape
 ============================
 
 Escape facilitates the logistics process of traveling and planning.
-![About Page](https://raw.githubusercontent.com/Dlindo28/TeamZapCSSI/master/tutorial/about-page.png)
 
 ## Demo
 Have no clue where your next adventure will be? Follow these steps:
@@ -11,9 +10,10 @@ Have no clue where your next adventure will be? Follow these steps:
 ![1. Visit our website and login](https://raw.githubusercontent.com/Dlindo28/TeamZapCSSI/master/tutorial/home-page.png)
 - Explore our webpage,[Escape](https://zap-escape.appspot.com/)
 
-##### Fill our short survey and you’ll be matched with a place
+#### Fill our short survey and you’ll be matched with a place
 ![2. Answer a few questions](https://raw.githubusercontent.com/Dlindo28/TeamZapCSSI/master/tutorial/survey-page.png)
-- Finding a place that suits your needs and preferences is easy as 1, 2, click!
+
+#### Finding a place that suits your needs and preferences is easy as 1, 2, click!
 ![Dubai](https://raw.githubusercontent.com/Dlindo28/TeamZapCSSI/master/tutorial/dubai-page.png)
 
 
